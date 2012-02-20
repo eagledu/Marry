@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4DCF9314F27415008F413E /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4DCF9214F27415008F413E /* File.strings */; };
 		DA51FA9D14F0D8EA0088FEDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51FA9C14F0D8EA0088FEDF /* UIKit.framework */; };
 		DA51FA9F14F0D8EA0088FEDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51FA9E14F0D8EA0088FEDF /* Foundation.framework */; };
 		DA51FAA114F0D8EA0088FEDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51FAA014F0D8EA0088FEDF /* CoreGraphics.framework */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4DCF9214F27415008F413E /* File.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
 		DA51FA9814F0D8EA0088FEDF /* Marry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA51FA9C14F0D8EA0088FEDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA51FA9E14F0D8EA0088FEDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -197,8 +199,8 @@
 		DAB8BA1914F15A12001312B8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DAB8BA1B14F15A42001312B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DAB8BA2F14F16186001312B8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
-		DAB8BA3214F1628E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; path = libxml2.dylib; sourceTree = "<group>"; };
-		DAB8BA3414F1635E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = file; path = libxml2.dylib; sourceTree = "<group>"; };
+		DAB8BA3214F1628E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxml2.dylib; sourceTree = "<group>"; };
+		DAB8BA3414F1635E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxml2.dylib; sourceTree = "<group>"; };
 		DAB8BA3614F163DD001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -344,6 +346,7 @@
 				DA51FFB014F132F40088FEDF /* RigisterationViewController.m */,
 				DA51FFB214F136180088FEDF /* ForgetPasswordViewController.h */,
 				DA51FFB314F136180088FEDF /* ForgetPasswordViewController.m */,
+				DA4DCF9214F27415008F413E /* File.strings */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				DA51FABA14F0D8EA0088FEDF /* first@2x.png in Resources */,
 				DA51FABF14F0D8EA0088FEDF /* second.png in Resources */,
 				DA51FAC114F0D8EA0088FEDF /* second@2x.png in Resources */,
+				DA4DCF9314F27415008F413E /* File.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
