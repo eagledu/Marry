@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SBJson.h"
-#import "ASIHTTPRequest.h"
 
 @interface LoginViewController : UIViewController{
     SBJsonParser *jsonParser;
     ASIHTTPRequest *asiRequest;
 }
+@property (strong, nonatomic) IBOutlet UITextField *txtEmail;
+@property (strong, nonatomic) IBOutlet UITextField *txtPwd;
+
 
 @property(nonatomic,strong) SBJsonParser *jsonParser;
 @property(nonatomic,strong) ASIHTTPRequest *asiRequest;
 
 - (IBAction)loginButtonPressed:(id)sender;
--(void)grabURLInBackground:(NSString*)urlStr;
--(NSString*)grabURLSynchronous:(NSString*)urlStr;
-
+- (IBAction)didTextEditEnd:(UITextField*)sender;
+- (IBAction)backgroundTap:(id)sender;
 @end

@@ -69,21 +69,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="電郵地址" lineBreakMode="tailTruncation" minimumFontSize="10" id="Y37-CH-hVK">
-                                <rect key="frame" x="20" y="101" width="76" height="21"/>
+                                <rect key="frame" x="20" y="97" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="密碼" lineBreakMode="tailTruncation" minimumFontSize="10" id="sCR-h8-JeO">
-                                <rect key="frame" x="54" y="160" width="42" height="21"/>
+                                <rect key="frame" x="54" y="156" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XZI-Ti-ff8">
-                                <rect key="frame" x="112" y="211" width="72" height="37"/>
+                                <rect key="frame" x="112" y="207" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="登陆">
@@ -98,25 +98,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="jVn-VR-QbZ">
-                                <rect key="frame" x="112" y="96" width="154" height="31"/>
+                                <rect key="frame" x="112" y="92" width="154" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
                                     <action selector="didTextEditEnd:" destination="jhv-lQ-ife" eventType="editingDidEndOnExit" id="RRB-51-oR2"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ITk-49-roT">
-                                <rect key="frame" x="112" y="155" width="154" height="31"/>
+                                <rect key="frame" x="112" y="151" width="154" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="didTextEditEnd:" destination="jhv-lQ-ife" eventType="editingDidEndOnExit" id="gFJ-KT-wSE"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xj1-sA-M2u">
-                                <rect key="frame" x="200" y="211" width="72" height="37"/>
+                                <rect key="frame" x="200" y="207" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="注册">
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="X6Y-uh-2Wb">
-                                <rect key="frame" x="104" y="267" width="29" height="31"/>
+                                <rect key="frame" x="109" y="263" width="29" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" id="vVS-ji-SaF">
-                                <rect key="frame" x="138" y="264" width="134" height="37"/>
+                                <rect key="frame" x="132" y="260" width="134" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="忘记密码？">
@@ -166,7 +166,7 @@
                             <action selector="backgroundTap:" destination="jhv-lQ-ife" eventType="touchDown" id="SzE-31-ZPc"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="HRc-wN-L6r"/>
+                    <navigationItem key="navigationItem" title="登陆" id="HRc-wN-L6r"/>
                     <connections>
                         <outlet property="txtEmail" destination="jVn-VR-QbZ" id="iU0-Cf-osB"/>
                         <outlet property="txtPwd" destination="ITk-49-roT" id="WIw-o7-7eE"/>
@@ -289,36 +289,6 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-        </class>
-        <class className="ForgetPasswordViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ForgetPasswordViewController.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backgroundTap:"/>
-                <relationship kind="action" name="didTextEditEnd:"/>
-                <relationship kind="action" name="loginButtonPressed:"/>
-                <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtPwd" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="RigisterationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RigisterationViewController.h"/>
-        </class>
-        <class className="SecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
-        </class>
-        <class className="WellcomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WellcomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

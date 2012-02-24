@@ -70,6 +70,8 @@
 		DAB8BA1C14F15A42001312B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB8BA1B14F15A42001312B8 /* MobileCoreServices.framework */; };
 		DAE658BD14F3F186004372D2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE658BC14F3F186004372D2 /* libxml2.dylib */; };
 		DAE658BF14F3F1A6004372D2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE658BE14F3F1A6004372D2 /* libz.dylib */; };
+		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
+		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +202,10 @@
 		DAB8BA3414F1635E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxml2.dylib; sourceTree = "<group>"; };
 		DAE658BC14F3F186004372D2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		DAE658BE14F3F1A6004372D2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
+		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
+		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
+		DAE8F06D14F69AA500CD0A6B /* RequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestResult.m; path = Util/RequestResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,10 @@
 		DA4DCF9A14F2972B008F413E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				DAE8F06814F6926A00CD0A6B /* RequestHelper.h */,
+				DAE8F06914F6926A00CD0A6B /* RequestHelper.m */,
+				DAE8F06C14F69AA500CD0A6B /* RequestResult.h */,
+				DAE8F06D14F69AA500CD0A6B /* RequestResult.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -669,6 +679,8 @@
 				DAB8BA1014F1588C001312B8 /* SBJsonWriter.m in Sources */,
 				DAB8BA1114F1588C001312B8 /* WaitingForViewControler.m in Sources */,
 				DAB8BA1614F15912001312B8 /* Reachability.m in Sources */,
+				DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */,
+				DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

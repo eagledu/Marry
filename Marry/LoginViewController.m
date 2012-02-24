@@ -7,9 +7,12 @@
 //
 
 #import "LoginViewController.h"
+#import "RequestHelper.h"
 
 @implementation LoginViewController
 
+@synthesize txtEmail;
+@synthesize txtPwd;
 @synthesize jsonParser;
 @synthesize asiRequest;
 
@@ -40,56 +43,46 @@
 
 //Seft defined
 - (IBAction)loginButtonPressed:(id)sender {
-   NSDictionary *resultObj = [self grabURLSynchronous:@"http://gzuat.vicp.net/Wedding/App/User.ashx?operation=login"];
-    NSString *str= [resultObj objectForKey:@"Error"];
-    [self performSegueWithIdentifier:@"LoginToMenu" sender:self];
-}
-
--(NSDictionary*)grabURLSynchronous:(NSString*) urlString{
-    NSURL *url = [NSURL URLWithString:urlString];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request startSynchronous];
-    NSError *error = [request error];
-    NSString *responseStr;
-    NSDictionary *resultObj;
-    if (!error) {
-        responseStr = [request responseString];
-        resultObj = [jsonParser objectWithString:responseStr];       
-    }
-    else{
-        resultObj=nil;
-    }
-    return resultObj;
-}
-
-- (void)grabURLInBackground:(NSString*)urlString
-{
-    NSURL *url = [NSURL URLWithString:urlString];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setTimeOutSeconds:2*60];
-    [request setDelegate:self];
-    [request startAsynchronous];
+    NSString *st=[NSString stringWithFormat:@"http://gzuat.vicp.net/Wedding/App/User.ashx?operation=login&email=%@&pwd=%@",txtEmail.text,txtPwd.text];
+    txtEmail.enabled=false;
+    txtPwd.enabled=false;
+    [RequestHelper getJsonInBackground:st funCompleted:^(RequestResult *result) {
+        if(result.success){            
+                [self performSegueWithIdentifier:@"LoginToMenu" sender:self];
+        }
+        else
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登陆失败" 
+                                                                message:result.errorMsg 
+                                                               delegate:nil 
+                                                      cancelButtonTitle:@"确认" 
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+    }];    
 }
 
 #pragma mark - View lifecycle
 
 /*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
+ // Implement loadView to create a view hierarchy programmatically, without using a nib.
+ - (void)loadView
+ {
+ }
+ */
 
 /*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
+ // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+ - (void)viewDidLoad
+ {
+ [super viewDidLoad];
+ }
+ */
 
 - (void)viewDidUnload
 {
+    [self setTxtEmail:nil];
+    [self setTxtPwd:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,6 +92,24 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)didTextEditEnd:(UITextField*)sender {
+    [sender resignFirstResponder];
+    if(txtPwd.text.length>0&&txtEmail.text.length>0){
+        [self loginButtonPressed:self];
+    }
+    else if(sender==txtEmail&&(txtPwd.text ==nil||txtPwd.text.length==0)){
+        [txtPwd becomeFirstResponder];
+    } 
+    else if(sender==txtPwd&&(txtEmail.text==nil||txtEmail.text.length==0)){
+        [txtEmail becomeFirstResponder];
+    }
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [txtEmail resignFirstResponder];
+    [txtPwd resignFirstResponder];
 }
 
 @end
