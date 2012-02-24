@@ -10,6 +10,8 @@
 
 @implementation MarryTests
 
+@synthesize testModify;
+
 - (void)setUp
 {
     [super setUp];

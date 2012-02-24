@@ -9,5 +9,5 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface MarryTests : SenTestCase
-
+@property int testModify;
 @end
