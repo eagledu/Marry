@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RequestHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation LoginViewController
 
@@ -43,6 +44,10 @@
 
 //Seft defined
 - (IBAction)loginButtonPressed:(id)sender {
+    if(txtEmail.text.length==0||txtPwd.text.length==0)
+    {    
+        return;
+    }
     NSString *st=[NSString stringWithFormat:@"http://gzuat.vicp.net/Wedding/App/User.ashx?operation=login&email=%@&pwd=%@",txtEmail.text,txtPwd.text];
     txtEmail.enabled=false;
     txtPwd.enabled=false;
