@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="first" id="7"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1673" y="-40"/>
@@ -246,7 +246,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="宾客" image="second" id="6"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1661" y="590"/>
