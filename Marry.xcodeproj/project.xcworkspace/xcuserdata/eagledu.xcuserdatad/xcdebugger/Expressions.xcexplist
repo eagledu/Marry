@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[LoginViewController didTextEditEnd:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender==txtEmail">
+            </PersistentString>
+            <PersistentString
+               value = "txtPwd.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__42-[LoginViewController loginButtonPressed:]_block_invoke_0:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(__NSCFConstantString *)(((&apos;RequestResult&apos; *) (result)))-&gt;errorMsg">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
