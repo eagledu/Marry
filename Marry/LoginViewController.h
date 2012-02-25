@@ -9,17 +9,23 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController{
-    SBJsonParser *jsonParser;
-    ASIHTTPRequest *asiRequest;
+    BOOL isRunning;
+    ASIHTTPRequest *request;
+    BOOL isRemem;
 }
+@property (strong, nonatomic) IBOutlet UIImageView *imgUnCheck;
+@property (strong, nonatomic) IBOutlet UIImageView *imgCheck;
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;
 @property (strong, nonatomic) IBOutlet UITextField *txtPwd;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imgLoading;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnLogin;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnReg;
 
-
-@property(nonatomic,strong) SBJsonParser *jsonParser;
-@property(nonatomic,strong) ASIHTTPRequest *asiRequest;
 
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)didTextEditEnd:(UITextField*)sender;
-- (IBAction)backgroundTap:(id)sender;
+- (void)setTextFieldErrorCss:(UITextField*)txtField isError:(BOOL)error;
+- (BOOL)validateTextFieldErrorCss:(UITextField*)txtField;
+-(void)Login:(id)sender;
+-(void)CancelLogin:(id)sender;
 @end

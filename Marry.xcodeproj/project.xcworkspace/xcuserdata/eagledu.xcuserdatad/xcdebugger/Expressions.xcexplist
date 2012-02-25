@@ -3,6 +3,33 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__29-[LoginViewController Login:]_block_invoke_0:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "imgUnCheck.hidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController setTextFieldErrorCss:error:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "txtField.layer">
+            </PersistentString>
+            <PersistentString
+               value = "txtField.layer.masksToBounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController touchesBegan:withEvent:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[touch view]!=txtPwd">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[LoginViewController didTextEditEnd:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -18,6 +45,20 @@
          <PersistentStrings>
             <PersistentString
                value = "(__NSCFConstantString *)(((&apos;RequestResult&apos; *) (result)))-&gt;errorMsg">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[RequestHelper parseResult:error:httpRequest:]:RequestHelper.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "errorStr==nil">
+            </PersistentString>
+            <PersistentString
+               value = "[resultObj objectForKey:@&quot;Error&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "errorStr.length">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

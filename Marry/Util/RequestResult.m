@@ -13,14 +13,16 @@
 @synthesize error;
 @synthesize errorMsg;
 @synthesize extraData;
+@synthesize requestXHR;
 
--(id)init:(BOOL) success error:(NSError *)err errorMsg:(NSString*) errMsg extraData:(id) extra
+-(id)init:(BOOL) isSuccess error:(NSError *)err errorMsg:(NSString*) errMsg extraData:(id) extra httpRequest:(ASIHTTPRequest*) request;
 {
     if(self=[super init]){
+        success=isSuccess;
         error=err;
         errorMsg=errMsg;
-        error=err;
         extraData=extra;
+        requestXHR=request;
     }
     return self;
 }

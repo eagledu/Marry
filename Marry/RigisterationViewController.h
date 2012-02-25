@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface RigisterationViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtEmail;
+@property (strong, nonatomic) IBOutlet UITextField *txtPwd;
+@property (strong, nonatomic) IBOutlet UITextField *txtCroomName;
+@property (strong, nonatomic) IBOutlet UITextField *txtBrideName;
+@property (strong, nonatomic) IBOutlet UITextField *BigDateName;
+@property (strong, nonatomic) IBOutlet UIButton *btnReg;
+- (IBAction)registerLoginAccount:(id)sender;
 
 @end

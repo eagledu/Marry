@@ -70,8 +70,19 @@
 		DAB8BA1C14F15A42001312B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB8BA1B14F15A42001312B8 /* MobileCoreServices.framework */; };
 		DAE658BD14F3F186004372D2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE658BC14F3F186004372D2 /* libxml2.dylib */; };
 		DAE658BF14F3F1A6004372D2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE658BE14F3F1A6004372D2 /* libz.dylib */; };
+		DAE696A414F8F670006C1E4B /* UIImageActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE696A314F8F670006C1E4B /* UIImageActionSheet.m */; };
+		DAE696AB14F9212D006C1E4B /* UILoadingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE696AA14F9212D006C1E4B /* UILoadingBox.m */; };
+		DAE696AD14F92A57006C1E4B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE696AC14F92A57006C1E4B /* close.png */; };
+		DAE696B114F942E8006C1E4B /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE696B014F942E8006C1E4B /* RequestManager.m */; };
 		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
 		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
+		DAE9977D14F881F200E89F0A /* Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977C14F881F200E89F0A /* Definition.m */; };
+		DAE9978014F8859F00E89F0A /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977F14F8859F00E89F0A /* Settings.m */; };
+		DAE9978314F885B900E89F0A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9978214F885B900E89F0A /* Config.m */; };
+		DAE9978614F894D300E89F0A /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE9978414F894D300E89F0A /* checked.png */; };
+		DAE9978714F894D300E89F0A /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE9978514F894D300E89F0A /* uncheck.png */; };
+		DAE9978E14F89D4D00E89F0A /* EmailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9978D14F89D4D00E89F0A /* EmailHelper.m */; };
+		DAE9979A14F8AA5000E89F0A /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9979914F8AA5000E89F0A /* UIHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,10 +213,29 @@
 		DAB8BA3414F1635E001312B8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxml2.dylib; sourceTree = "<group>"; };
 		DAE658BC14F3F186004372D2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		DAE658BE14F3F1A6004372D2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DAE696A214F8F670006C1E4B /* UIImageActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageActionSheet.h; path = Controls/UIImageActionSheet.h; sourceTree = "<group>"; };
+		DAE696A314F8F670006C1E4B /* UIImageActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageActionSheet.m; path = Controls/UIImageActionSheet.m; sourceTree = "<group>"; };
+		DAE696A914F9212D006C1E4B /* UILoadingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILoadingBox.h; path = Controls/UILoadingBox.h; sourceTree = "<group>"; };
+		DAE696AA14F9212D006C1E4B /* UILoadingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILoadingBox.m; path = Controls/UILoadingBox.m; sourceTree = "<group>"; };
+		DAE696AC14F92A57006C1E4B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = Images/close.png; sourceTree = "<group>"; };
+		DAE696AF14F942E8006C1E4B /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = Util/RequestManager.h; sourceTree = "<group>"; };
+		DAE696B014F942E8006C1E4B /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManager.m; path = Util/RequestManager.m; sourceTree = "<group>"; };
 		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
 		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
 		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
 		DAE8F06D14F69AA500CD0A6B /* RequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestResult.m; path = Util/RequestResult.m; sourceTree = "<group>"; };
+		DAE9977B14F881F200E89F0A /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Definition.h; path = Util/Definition.h; sourceTree = "<group>"; };
+		DAE9977C14F881F200E89F0A /* Definition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Definition.m; path = Util/Definition.m; sourceTree = "<group>"; };
+		DAE9977E14F8859F00E89F0A /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Util/Settings.h; sourceTree = "<group>"; };
+		DAE9977F14F8859F00E89F0A /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Util/Settings.m; sourceTree = "<group>"; };
+		DAE9978114F885B900E89F0A /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = Util/Config.h; sourceTree = "<group>"; };
+		DAE9978214F885B900E89F0A /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Config.m; path = Util/Config.m; sourceTree = "<group>"; };
+		DAE9978414F894D300E89F0A /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = Images/checked.png; sourceTree = "<group>"; };
+		DAE9978514F894D300E89F0A /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uncheck.png; path = Images/uncheck.png; sourceTree = "<group>"; };
+		DAE9978C14F89D4D00E89F0A /* EmailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailHelper.h; path = Util/EmailHelper.h; sourceTree = "<group>"; };
+		DAE9978D14F89D4D00E89F0A /* EmailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailHelper.m; path = Util/EmailHelper.m; sourceTree = "<group>"; };
+		DAE9979814F8AA5000E89F0A /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIHelper.h; path = Util/UIHelper.h; sourceTree = "<group>"; };
+		DAE9979914F8AA5000E89F0A /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIHelper.m; path = Util/UIHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +274,16 @@
 				DAE8F06914F6926A00CD0A6B /* RequestHelper.m */,
 				DAE8F06C14F69AA500CD0A6B /* RequestResult.h */,
 				DAE8F06D14F69AA500CD0A6B /* RequestResult.m */,
+				DAE9977B14F881F200E89F0A /* Definition.h */,
+				DAE9977C14F881F200E89F0A /* Definition.m */,
+				DAE9977E14F8859F00E89F0A /* Settings.h */,
+				DAE9977F14F8859F00E89F0A /* Settings.m */,
+				DAE9978114F885B900E89F0A /* Config.h */,
+				DAE9978214F885B900E89F0A /* Config.m */,
+				DAE9978C14F89D4D00E89F0A /* EmailHelper.h */,
+				DAE9978D14F89D4D00E89F0A /* EmailHelper.m */,
+				DAE696AF14F942E8006C1E4B /* RequestManager.h */,
+				DAE696B014F942E8006C1E4B /* RequestManager.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -289,6 +329,7 @@
 		DA51FAA214F0D8EA0088FEDF /* Marry */ = {
 			isa = PBXGroup;
 			children = (
+				DAE696A014F8F617006C1E4B /* Controls */,
 				DA4DCF9A14F2972B008F413E /* Util */,
 				DA51FEFD14F0FE060088FEDF /* Resources */,
 				DA51FEFA14F0FDA30088FEDF /* Class */,
@@ -378,6 +419,9 @@
 		DA51FEFC14F0FDE10088FEDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DAE696AC14F92A57006C1E4B /* close.png */,
+				DAE9978414F894D300E89F0A /* checked.png */,
+				DAE9978514F894D300E89F0A /* uncheck.png */,
 				DA51FAB714F0D8EA0088FEDF /* first.png */,
 				DA51FAB914F0D8EA0088FEDF /* first@2x.png */,
 				DA51FABE14F0D8EA0088FEDF /* second.png */,
@@ -525,6 +569,19 @@
 			path = External/Reachability;
 			sourceTree = "<group>";
 		};
+		DAE696A014F8F617006C1E4B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				DAE9979814F8AA5000E89F0A /* UIHelper.h */,
+				DAE9979914F8AA5000E89F0A /* UIHelper.m */,
+				DAE696A214F8F670006C1E4B /* UIImageActionSheet.h */,
+				DAE696A314F8F670006C1E4B /* UIImageActionSheet.m */,
+				DAE696A914F9212D006C1E4B /* UILoadingBox.h */,
+				DAE696AA14F9212D006C1E4B /* UILoadingBox.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -602,6 +659,9 @@
 				DA51FABA14F0D8EA0088FEDF /* first@2x.png in Resources */,
 				DA51FABF14F0D8EA0088FEDF /* second.png in Resources */,
 				DA51FAC114F0D8EA0088FEDF /* second@2x.png in Resources */,
+				DAE9978614F894D300E89F0A /* checked.png in Resources */,
+				DAE9978714F894D300E89F0A /* uncheck.png in Resources */,
+				DAE696AD14F92A57006C1E4B /* close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +741,14 @@
 				DAB8BA1614F15912001312B8 /* Reachability.m in Sources */,
 				DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */,
 				DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */,
+				DAE9977D14F881F200E89F0A /* Definition.m in Sources */,
+				DAE9978014F8859F00E89F0A /* Settings.m in Sources */,
+				DAE9978314F885B900E89F0A /* Config.m in Sources */,
+				DAE9978E14F89D4D00E89F0A /* EmailHelper.m in Sources */,
+				DAE9979A14F8AA5000E89F0A /* UIHelper.m in Sources */,
+				DAE696A414F8F670006C1E4B /* UIImageActionSheet.m in Sources */,
+				DAE696AB14F9212D006C1E4B /* UILoadingBox.m in Sources */,
+				DAE696B114F942E8006C1E4B /* RequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

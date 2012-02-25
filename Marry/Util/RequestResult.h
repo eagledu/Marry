@@ -14,11 +14,13 @@
     NSError *error;
     NSString *errorMsg;
     id extraData;
+    ASIHTTPRequest *requestXHR;
 }
 
 @property(nonatomic) BOOL success;
 @property(nonatomic,strong) NSError *error;
 @property(nonatomic,strong) NSString *errorMsg;
 @property(nonatomic,strong) id extraData;
--(id)init:(BOOL) success error:(NSError *)err errorMsg:(NSString*) errMsg extraData:(id) extra;
+@property(nonatomic,strong) ASIHTTPRequest *requestXHR;
+-(id)init:(BOOL) isSuccess error:(NSError *)err errorMsg:(NSString*) errMsg extraData:(id) extra httpRequest:(ASIHTTPRequest*) request;
 @end

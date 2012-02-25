@@ -18,11 +18,11 @@ typedef void (^FuncJsonResultBlock)(RequestResult *result);
 
 @interface RequestHelper : NSObject
 
-+(void)grabInBackground:(NSString*)url funCompleted: (FuncResultBlock) onCompleted;
++(ASIHTTPRequest*)grabInBackground:(NSString*)url funCompleted: (FuncResultBlock) onCompleted;
 +(void)grabSynchronous:(NSString*)url funCompleted: (FuncResultBlock) onCompleted;
 
-+(void)getJsonInBackground:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted;
++(ASIHTTPRequest*)getJsonInBackground:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted;
 +(void)getJsonSynchronous:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted;
 
-+(RequestResult*)parseResult:(NSString*)result error:(NSError*)error;
++(RequestResult*)parseResult:(NSString*)result error:(NSError*)error httpRequest:(ASIHTTPRequest*)request;
 @end

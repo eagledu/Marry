@@ -9,6 +9,12 @@
 #import "RigisterationViewController.h"
 
 @implementation RigisterationViewController
+@synthesize txtEmail;
+@synthesize txtPwd;
+@synthesize txtCroomName;
+@synthesize txtBrideName;
+@synthesize BigDateName;
+@synthesize btnReg;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +52,12 @@
 
 - (void)viewDidUnload
 {
+    [self setTxtEmail:nil];
+    [self setTxtPwd:nil];
+    [self setTxtCroomName:nil];
+    [self setTxtBrideName:nil];
+    [self setBigDateName:nil];
+    [self setBtnReg:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,4 +69,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)registerLoginAccount:(id)sender {
+}
 @end
