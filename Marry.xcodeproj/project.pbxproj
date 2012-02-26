@@ -81,6 +81,10 @@
 		DAE7C30A14FA45A800CC6A85 /* guest.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30414FA45A800CC6A85 /* guest.png */; };
 		DAE7C30B14FA45A800CC6A85 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30514FA45A800CC6A85 /* home.png */; };
 		DAE7C30C14FA45A800CC6A85 /* schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30614FA45A800CC6A85 /* schedule.png */; };
+		DAE7C30F14FA490300CC6A85 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C30E14FA490300CC6A85 /* ScheduleViewController.m */; };
+		DAE7C31214FA492D00CC6A85 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C31114FA492D00CC6A85 /* MoreViewController.m */; };
+		DAE7C31914FA54C400CC6A85 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31714FA54C400CC6A85 /* calendar.png */; };
+		DAE7C31A14FA54C400CC6A85 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31814FA54C400CC6A85 /* radar.png */; };
 		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
 		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
 		DAE9977D14F881F200E89F0A /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977C14F881F200E89F0A /* Global.m */; };
@@ -115,11 +119,11 @@
 		DA51FAAC14F0D8EA0088FEDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DA51FAAF14F0D8EA0088FEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		DA51FAB214F0D8EA0088FEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		DA51FAB414F0D8EA0088FEDF /* HomeViewController.h */ = {isa = PBXFileReference; path = HomeViewController.h; sourceTree = "<group>"; };
+		DA51FAB414F0D8EA0088FEDF /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DA51FAB514F0D8EA0088FEDF /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DA51FAB714F0D8EA0088FEDF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		DA51FAB914F0D8EA0088FEDF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		DA51FABB14F0D8EA0088FEDF /* GuestViewController.h */ = {isa = PBXFileReference; path = GuestViewController.h; sourceTree = "<group>"; };
+		DA51FABB14F0D8EA0088FEDF /* GuestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuestViewController.h; sourceTree = "<group>"; };
 		DA51FABC14F0D8EA0088FEDF /* GuestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuestViewController.m; sourceTree = "<group>"; };
 		DA51FABE14F0D8EA0088FEDF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		DA51FAC014F0D8EA0088FEDF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -235,6 +239,12 @@
 		DAE7C30414FA45A800CC6A85 /* guest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = guest.png; path = Images/guest.png; sourceTree = "<group>"; };
 		DAE7C30514FA45A800CC6A85 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Images/home.png; sourceTree = "<group>"; };
 		DAE7C30614FA45A800CC6A85 /* schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = schedule.png; path = Images/schedule.png; sourceTree = "<group>"; };
+		DAE7C30D14FA490300CC6A85 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		DAE7C30E14FA490300CC6A85 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		DAE7C31014FA492C00CC6A85 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		DAE7C31114FA492D00CC6A85 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		DAE7C31714FA54C400CC6A85 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = Images/calendar.png; sourceTree = "<group>"; };
+		DAE7C31814FA54C400CC6A85 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radar.png; path = Images/radar.png; sourceTree = "<group>"; };
 		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
 		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
 		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
@@ -418,6 +428,10 @@
 				DA51FFB014F132F40088FEDF /* RigisterationViewController.m */,
 				DA51FFB214F136180088FEDF /* ForgetPasswordViewController.h */,
 				DA51FFB314F136180088FEDF /* ForgetPasswordViewController.m */,
+				DAE7C30D14FA490300CC6A85 /* ScheduleViewController.h */,
+				DAE7C30E14FA490300CC6A85 /* ScheduleViewController.m */,
+				DAE7C31014FA492C00CC6A85 /* MoreViewController.h */,
+				DAE7C31114FA492D00CC6A85 /* MoreViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -434,6 +448,8 @@
 		DA51FEFC14F0FDE10088FEDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DAE7C31714FA54C400CC6A85 /* calendar.png */,
+				DAE7C31814FA54C400CC6A85 /* radar.png */,
 				DAE7C30114FA45A800CC6A85 /* chat.png */,
 				DAE7C30214FA45A800CC6A85 /* email.png */,
 				DAE7C30314FA45A800CC6A85 /* gear.png */,
@@ -691,6 +707,8 @@
 				DAE7C30A14FA45A800CC6A85 /* guest.png in Resources */,
 				DAE7C30B14FA45A800CC6A85 /* home.png in Resources */,
 				DAE7C30C14FA45A800CC6A85 /* schedule.png in Resources */,
+				DAE7C31914FA54C400CC6A85 /* calendar.png in Resources */,
+				DAE7C31A14FA54C400CC6A85 /* radar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +797,8 @@
 				DAE696AB14F9212D006C1E4B /* UILoadingBox.m in Sources */,
 				DAE696B114F942E8006C1E4B /* RequestManager.m in Sources */,
 				DAE7C2FF14FA237600CC6A85 /* AlertView.m in Sources */,
+				DAE7C30F14FA490300CC6A85 /* ScheduleViewController.m in Sources */,
+				DAE7C31214FA492D00CC6A85 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
