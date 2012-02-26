@@ -8,12 +8,12 @@
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="2" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="20">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="大日子" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="20">
                                 <rect key="frame" x="54" y="98" width="212" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -21,7 +21,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the first view controller — an instance of FirstViewController — specified in the app delegate." textAlignment="center" id="21">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="婚宴-廣州[Feb 14 2013] 還有353日就到您們的大日子" textAlignment="center" id="21">
                                 <rect key="frame" x="20" y="181" width="280" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
@@ -30,7 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="首页" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home.png" id="7"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1673" y="-40"/>
@@ -143,7 +143,7 @@
                                 <rect key="frame" x="201" y="-32" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <activityIndicatorView hidden="YES" opaque="NO" autoresizesSubviews="NO" userInteractionEnabled="NO" tag="2" contentMode="top" hidesWhenStopped="YES" style="whiteLarge" id="AK5-tS-f8F">
+                            <activityIndicatorView hidden="YES" autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="top" hidesWhenStopped="YES" style="whiteLarge" id="AK5-tS-f8F">
                                 <rect key="frame" x="85" y="70" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,30 +200,50 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="QnW-YD-7hl"/>
+                                    <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="vMX-Dl-9Kk"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新郎姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="iZe-tO-QjA">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新郎姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="iZe-tO-QjA">
                                 <rect key="frame" x="20" y="111" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="M76-qq-6C0"/>
+                                    <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="Sfx-od-TP8"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="登陆密码" minimumFontSize="17" clearButtonMode="whileEditing" id="TBD-VK-9pM">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="登陆密码" minimumFontSize="17" clearButtonMode="whileEditing" id="TBD-VK-9pM">
                                 <rect key="frame" x="20" y="64" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="apK-3i-wrq"/>
+                                    <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="9yA-hd-fQm"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新娘姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="ZIr-ZS-fRl">
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新娘姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="ZIr-ZS-fRl">
                                 <rect key="frame" x="20" y="158" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="K41-eZ-dir"/>
+                                    <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="6PV-0b-piN"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="婚礼称谓" minimumFontSize="17" clearButtonMode="whileEditing" id="Tod-0f-23W">
+                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="婚礼称谓" minimumFontSize="17" clearButtonMode="whileEditing" id="Tod-0f-23W">
                                 <rect key="frame" x="20" y="205" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="S7U-Aa-LYR"/>
+                                    <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="rKL-kf-DiQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Pm-qe-CWb">
                                 <rect key="frame" x="20" y="276" width="280" height="29"/>
@@ -257,16 +277,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lnt-ry-gRz"/>
                     <connections>
-                        <outlet property="BigDateName" destination="Tod-0f-23W" id="54X-kr-wob"/>
                         <outlet property="btnReg" destination="9Pm-qe-CWb" id="kw6-Lc-rDA"/>
+                        <outlet property="txtBigDateName" destination="Tod-0f-23W" id="7Ea-Ud-BMz"/>
                         <outlet property="txtBrideName" destination="ZIr-ZS-fRl" id="NGo-JI-bxQ"/>
-                        <outlet property="txtCroomName" destination="iZe-tO-QjA" id="rnm-a2-yFy"/>
                         <outlet property="txtEmail" destination="dMH-gV-688" id="KOj-Xu-jlq"/>
+                        <outlet property="txtGroomName" destination="iZe-tO-QjA" id="FBf-sv-6rk"/>
                         <outlet property="txtPwd" destination="TBD-VK-9pM" id="SkA-dl-b51"/>
+                        <segue destination="jhv-lQ-ife" kind="modal" identifier="BackToLogin" modalTransitionStyle="flipHorizontal" id="Z84-Vy-jEP"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="386" y="-202"/>
+            <point key="canvasLocation" x="374" y="-194"/>
         </scene>
         <scene sceneID="k0S-Bk-dav">
             <objects>
@@ -308,12 +329,12 @@
         <scene sceneID="13">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
-                <viewController title="Second" id="3" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController title="Second" id="3" customClass="GuestViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="22">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="宾客管理" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="22">
                                 <rect key="frame" x="54" y="98" width="212" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -321,7 +342,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the second view controller — an instance of SecondViewController — specified in the app delegate." textAlignment="center" id="23">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" id="23">
                                 <rect key="frame" x="20" y="181" width="280" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
@@ -330,10 +351,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="宾客" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="宾客" image="guest.png" id="6"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1661" y="590"/>
+            <point key="canvasLocation" x="2017" y="626"/>
         </scene>
         <scene sceneID="15">
             <objects>
@@ -351,25 +372,26 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="1222" y="302"/>
+            <point key="canvasLocation" x="958" y="470"/>
         </scene>
     </scenes>
     <resources>
         <image name="checked.png" width="40" height="40"/>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
+        <image name="guest.png" width="32" height="21"/>
+        <image name="home.png" width="22" height="22"/>
         <image name="uncheck.png" width="42" height="38"/>
     </resources>
     <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-        </class>
         <class className="ForgetPasswordViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ForgetPasswordViewController.h"/>
+        </class>
+        <class className="GuestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestViewController.h"/>
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didTextChanged:"/>
                 <relationship kind="action" name="didTextEditEnd:" candidateClass="UITextField"/>
                 <relationship kind="action" name="loginButtonPressed:"/>
                 <relationship kind="outlet" name="btnLogin" candidateClass="UIBarButtonItem"/>
@@ -384,17 +406,16 @@
         <class className="RigisterationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RigisterationViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didTextChanged:"/>
+                <relationship kind="action" name="didTextEditEnd:" candidateClass="UITextField"/>
                 <relationship kind="action" name="registerLoginAccount:"/>
-                <relationship kind="outlet" name="BigDateName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="btnReg" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="txtBigDateName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtBrideName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtCroomName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtGroomName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtPwd" candidateClass="UITextField"/>
             </relationships>
-        </class>
-        <class className="SecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
         </class>
         <class className="WellcomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WellcomeViewController.h"/>
@@ -408,4 +429,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="MrK-Zu-zb1"/>
+    </inferredMetricsTieBreakers>
 </document>

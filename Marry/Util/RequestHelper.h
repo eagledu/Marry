@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RequestResult.h"
+#import "SBJson.h"
 
 #if NS_BLOCKS_AVAILABLE
 typedef void (^FuncBlock)(void);
@@ -25,4 +26,7 @@ typedef void (^FuncJsonResultBlock)(RequestResult *result);
 +(void)getJsonSynchronous:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted;
 
 +(RequestResult*)parseResult:(NSString*)result error:(NSError*)error httpRequest:(ASIHTTPRequest*)request;
+
++ (NSString*)encodeURIComponent:(NSString *)string;
+
 @end

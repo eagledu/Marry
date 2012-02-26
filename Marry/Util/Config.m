@@ -10,4 +10,18 @@
 
 @implementation Config
 
+-(id)init
+{
+    self=[super init];
+    if(self)
+    {
+        _requestTimeout=60;
+    }
+    return  self;
+}
+
+#pragma Property
+
+@synthesize requestTimeout;
+
 @end

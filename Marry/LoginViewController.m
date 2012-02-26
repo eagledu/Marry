@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "RequestHelper.h"
+#import "RequestManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import "EmailHelper.h"
 #import "UILoadingBox.h"
@@ -42,7 +42,12 @@
         imgCheck.hidden=NO;
         imgUnCheck.hidden=YES;
     }
-    [super viewDidLoad];   
+    [super viewDidLoad];
+    if([Settings instance].globalInstance.registeredEmail!=nil){
+        txtEmail.text=[Settings instance].globalInstance.registeredEmail;
+        [Settings instance].globalInstance.registeredEmail=nil;
+        [txtPwd becomeFirstResponder];
+    }
     //[loading dismissWithClickedButtonIndex:0 animated:YES];
 }
 
@@ -69,8 +74,8 @@
 -(void)Login:(id)sender{
     [txtEmail resignFirstResponder];
     [txtPwd resignFirstResponder];
-    BOOL success=[self validateTextFieldErrorCss:txtEmail];
-    success=success &&[self validateTextFieldErrorCss:txtPwd];
+    BOOL success=[UIHelper validateTextFieldErrorCss:txtEmail];
+    success=success &&[UIHelper validateTextFieldErrorCss:txtPwd];
     if(!success)
     {
         return;
@@ -78,14 +83,13 @@
     if(![EmailHelper isValidEmail:txtEmail.text])
     {
         [UIHelper showAlert:@"提示" message:@"无效的邮箱格式。" delegate:nil];
-        [self setTextFieldErrorCss:txtEmail isError:YES];
+        [UIHelper setTextFieldErrorCss:txtEmail isError:YES];
         return;
     }
     else
     {
-        [self setTextFieldErrorCss:txtEmail isError:NO];
+        [UIHelper setTextFieldErrorCss:txtEmail isError:NO];
     }
-    NSString *st=[NSString stringWithFormat:[Settings definition].loginXHR,txtEmail.text,txtPwd.text];
     for(UIView *view in self.view.subviews)
     {        
         view.hidden=view.tag!=2;
@@ -95,7 +99,7 @@
     btnLogin.tintColor=[UIColor lightGrayColor];
     [imgLoading startAnimating];
     btnReg.enabled=NO;
-    request = [RequestHelper getJsonInBackground:st funCompleted:^(RequestResult *result) {
+    request = [RequestManager loginWithAccount:txtEmail.text password:txtPwd.text funCompleted:^(RequestResult *result) {
         isRunning=NO;
         for(UIView *view in self.view.subviews)
         {
@@ -132,33 +136,6 @@
         btnLogin.title=@"登陆";
         btnLogin.tintColor=[UIColor colorWithRed:0.6 green:0.8 blue:0.5 alpha:0.5];
         [imgLoading stopAnimating];
-    }
-}
-- (void)setTextFieldErrorCss:(UITextField*)txtField isError:(BOOL)error
-{
-    if(error)
-    {
-        txtField.layer.masksToBounds = YES;
-        txtField.layer.borderWidth = 2.0;
-        txtField.layer.cornerRadius = 5.0;
-        txtField.clipsToBounds = YES;
-        txtField.layer.borderColor=[[UIColor redColor] CGColor];
-    }
-    else
-    {
-        txtField.layer.borderWidth=0;
-    }
-}
-- (BOOL)validateTextFieldErrorCss:(UITextField*)txtField
-{
-    if(txtField.text.length==0){
-        [self setTextFieldErrorCss:txtField isError: YES];
-        return NO;
-    }
-    else
-    {
-        [self setTextFieldErrorCss:txtField isError:NO];
-        return YES;
     }
 }
 
@@ -242,8 +219,14 @@
         [txtPwd resignFirstResponder];
     }
     if(txtEmail.text.length>0)
-        [self validateTextFieldErrorCss:txtEmail];
+        [UIHelper validateTextFieldErrorCss:txtEmail];
     if(txtPwd.text.length>0)
-        [self validateTextFieldErrorCss:txtPwd];
+        [UIHelper validateTextFieldErrorCss:txtPwd];
+}
+#pragma Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 @end

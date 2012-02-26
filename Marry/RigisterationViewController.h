@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface RigisterationViewController : UIViewController
+{
+    ASIHTTPRequest *request;
+}
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;
 @property (strong, nonatomic) IBOutlet UITextField *txtPwd;
-@property (strong, nonatomic) IBOutlet UITextField *txtCroomName;
+@property (strong, nonatomic) IBOutlet UITextField *txtGroomName;
 @property (strong, nonatomic) IBOutlet UITextField *txtBrideName;
-@property (strong, nonatomic) IBOutlet UITextField *BigDateName;
+@property (strong, nonatomic) IBOutlet UITextField *txtBigDateName;
 @property (strong, nonatomic) IBOutlet UIButton *btnReg;
 - (IBAction)registerLoginAccount:(id)sender;
-
+- (IBAction)didTextEditEnd:(UITextField*)sender;
+- (IBAction)didTextChanged:(id)sender;
 @end

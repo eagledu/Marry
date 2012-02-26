@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Config : NSObject
+{
+    NSTimeInterval _requestTimeout;
+}
 
+@property NSTimeInterval requestTimeout;
 @end

@@ -39,6 +39,9 @@
     [activityView startAnimating];
     [self show];
 }
+-(void) hideLoading{
+    [self dismissWithClickedButtonIndex:0 animated:YES];
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];

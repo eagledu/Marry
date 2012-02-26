@@ -15,10 +15,10 @@
 		DA51FAAD14F0D8EA0088FEDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA51FAAC14F0D8EA0088FEDF /* AppDelegate.m */; };
 		DA51FAB014F0D8EA0088FEDF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA51FAAE14F0D8EA0088FEDF /* MainStoryboard_iPhone.storyboard */; };
 		DA51FAB314F0D8EA0088FEDF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA51FAB114F0D8EA0088FEDF /* MainStoryboard_iPad.storyboard */; };
-		DA51FAB614F0D8EA0088FEDF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA51FAB514F0D8EA0088FEDF /* FirstViewController.m */; };
+		DA51FAB614F0D8EA0088FEDF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA51FAB514F0D8EA0088FEDF /* HomeViewController.m */; };
 		DA51FAB814F0D8EA0088FEDF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DA51FAB714F0D8EA0088FEDF /* first.png */; };
 		DA51FABA14F0D8EA0088FEDF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA51FAB914F0D8EA0088FEDF /* first@2x.png */; };
-		DA51FABD14F0D8EA0088FEDF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA51FABC14F0D8EA0088FEDF /* SecondViewController.m */; };
+		DA51FABD14F0D8EA0088FEDF /* GuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA51FABC14F0D8EA0088FEDF /* GuestViewController.m */; };
 		DA51FABF14F0D8EA0088FEDF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DA51FABE14F0D8EA0088FEDF /* second.png */; };
 		DA51FAC114F0D8EA0088FEDF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA51FAC014F0D8EA0088FEDF /* second@2x.png */; };
 		DA51FAC914F0D8EA0088FEDF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51FAC814F0D8EA0088FEDF /* SenTestingKit.framework */; };
@@ -74,9 +74,16 @@
 		DAE696AB14F9212D006C1E4B /* UILoadingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE696AA14F9212D006C1E4B /* UILoadingBox.m */; };
 		DAE696AD14F92A57006C1E4B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE696AC14F92A57006C1E4B /* close.png */; };
 		DAE696B114F942E8006C1E4B /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE696B014F942E8006C1E4B /* RequestManager.m */; };
+		DAE7C2FF14FA237600CC6A85 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C2FE14FA237600CC6A85 /* AlertView.m */; };
+		DAE7C30714FA45A800CC6A85 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30114FA45A800CC6A85 /* chat.png */; };
+		DAE7C30814FA45A800CC6A85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30214FA45A800CC6A85 /* email.png */; };
+		DAE7C30914FA45A800CC6A85 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30314FA45A800CC6A85 /* gear.png */; };
+		DAE7C30A14FA45A800CC6A85 /* guest.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30414FA45A800CC6A85 /* guest.png */; };
+		DAE7C30B14FA45A800CC6A85 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30514FA45A800CC6A85 /* home.png */; };
+		DAE7C30C14FA45A800CC6A85 /* schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C30614FA45A800CC6A85 /* schedule.png */; };
 		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
 		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
-		DAE9977D14F881F200E89F0A /* Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977C14F881F200E89F0A /* Definition.m */; };
+		DAE9977D14F881F200E89F0A /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977C14F881F200E89F0A /* Global.m */; };
 		DAE9978014F8859F00E89F0A /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977F14F8859F00E89F0A /* Settings.m */; };
 		DAE9978314F885B900E89F0A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9978214F885B900E89F0A /* Config.m */; };
 		DAE9978614F894D300E89F0A /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE9978414F894D300E89F0A /* checked.png */; };
@@ -108,12 +115,12 @@
 		DA51FAAC14F0D8EA0088FEDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DA51FAAF14F0D8EA0088FEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		DA51FAB214F0D8EA0088FEDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		DA51FAB414F0D8EA0088FEDF /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		DA51FAB514F0D8EA0088FEDF /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		DA51FAB414F0D8EA0088FEDF /* HomeViewController.h */ = {isa = PBXFileReference; path = HomeViewController.h; sourceTree = "<group>"; };
+		DA51FAB514F0D8EA0088FEDF /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DA51FAB714F0D8EA0088FEDF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		DA51FAB914F0D8EA0088FEDF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		DA51FABB14F0D8EA0088FEDF /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		DA51FABC14F0D8EA0088FEDF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DA51FABB14F0D8EA0088FEDF /* GuestViewController.h */ = {isa = PBXFileReference; path = GuestViewController.h; sourceTree = "<group>"; };
+		DA51FABC14F0D8EA0088FEDF /* GuestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuestViewController.m; sourceTree = "<group>"; };
 		DA51FABE14F0D8EA0088FEDF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		DA51FAC014F0D8EA0088FEDF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		DA51FAC714F0D8EA0088FEDF /* MarryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,12 +227,20 @@
 		DAE696AC14F92A57006C1E4B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = Images/close.png; sourceTree = "<group>"; };
 		DAE696AF14F942E8006C1E4B /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = Util/RequestManager.h; sourceTree = "<group>"; };
 		DAE696B014F942E8006C1E4B /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManager.m; path = Util/RequestManager.m; sourceTree = "<group>"; };
+		DAE7C2FD14FA237600CC6A85 /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertView.h; path = Controls/AlertView.h; sourceTree = "<group>"; };
+		DAE7C2FE14FA237600CC6A85 /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertView.m; path = Controls/AlertView.m; sourceTree = "<group>"; };
+		DAE7C30114FA45A800CC6A85 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chat.png; path = Images/chat.png; sourceTree = "<group>"; };
+		DAE7C30214FA45A800CC6A85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = Images/email.png; sourceTree = "<group>"; };
+		DAE7C30314FA45A800CC6A85 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = Images/gear.png; sourceTree = "<group>"; };
+		DAE7C30414FA45A800CC6A85 /* guest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = guest.png; path = Images/guest.png; sourceTree = "<group>"; };
+		DAE7C30514FA45A800CC6A85 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Images/home.png; sourceTree = "<group>"; };
+		DAE7C30614FA45A800CC6A85 /* schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = schedule.png; path = Images/schedule.png; sourceTree = "<group>"; };
 		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
 		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
 		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
 		DAE8F06D14F69AA500CD0A6B /* RequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestResult.m; path = Util/RequestResult.m; sourceTree = "<group>"; };
-		DAE9977B14F881F200E89F0A /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Definition.h; path = Util/Definition.h; sourceTree = "<group>"; };
-		DAE9977C14F881F200E89F0A /* Definition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Definition.m; path = Util/Definition.m; sourceTree = "<group>"; };
+		DAE9977B14F881F200E89F0A /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = Util/Global.h; sourceTree = "<group>"; };
+		DAE9977C14F881F200E89F0A /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global.m; path = Util/Global.m; sourceTree = "<group>"; };
 		DAE9977E14F8859F00E89F0A /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Util/Settings.h; sourceTree = "<group>"; };
 		DAE9977F14F8859F00E89F0A /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Util/Settings.m; sourceTree = "<group>"; };
 		DAE9978114F885B900E89F0A /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = Util/Config.h; sourceTree = "<group>"; };
@@ -274,8 +289,8 @@
 				DAE8F06914F6926A00CD0A6B /* RequestHelper.m */,
 				DAE8F06C14F69AA500CD0A6B /* RequestResult.h */,
 				DAE8F06D14F69AA500CD0A6B /* RequestResult.m */,
-				DAE9977B14F881F200E89F0A /* Definition.h */,
-				DAE9977C14F881F200E89F0A /* Definition.m */,
+				DAE9977B14F881F200E89F0A /* Global.h */,
+				DAE9977C14F881F200E89F0A /* Global.m */,
 				DAE9977E14F8859F00E89F0A /* Settings.h */,
 				DAE9977F14F8859F00E89F0A /* Settings.m */,
 				DAE9978114F885B900E89F0A /* Config.h */,
@@ -391,10 +406,10 @@
 			children = (
 				DA51FAAB14F0D8EA0088FEDF /* AppDelegate.h */,
 				DA51FAAC14F0D8EA0088FEDF /* AppDelegate.m */,
-				DA51FAB414F0D8EA0088FEDF /* FirstViewController.h */,
-				DA51FAB514F0D8EA0088FEDF /* FirstViewController.m */,
-				DA51FABB14F0D8EA0088FEDF /* SecondViewController.h */,
-				DA51FABC14F0D8EA0088FEDF /* SecondViewController.m */,
+				DA51FAB414F0D8EA0088FEDF /* HomeViewController.h */,
+				DA51FAB514F0D8EA0088FEDF /* HomeViewController.m */,
+				DA51FABB14F0D8EA0088FEDF /* GuestViewController.h */,
+				DA51FABC14F0D8EA0088FEDF /* GuestViewController.m */,
 				DA51FF0214F0FF9C0088FEDF /* LoginViewController.h */,
 				DA51FF0314F0FF9C0088FEDF /* LoginViewController.m */,
 				DA51FF9514F108E50088FEDF /* WellcomeViewController.h */,
@@ -419,6 +434,12 @@
 		DA51FEFC14F0FDE10088FEDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DAE7C30114FA45A800CC6A85 /* chat.png */,
+				DAE7C30214FA45A800CC6A85 /* email.png */,
+				DAE7C30314FA45A800CC6A85 /* gear.png */,
+				DAE7C30414FA45A800CC6A85 /* guest.png */,
+				DAE7C30514FA45A800CC6A85 /* home.png */,
+				DAE7C30614FA45A800CC6A85 /* schedule.png */,
 				DAE696AC14F92A57006C1E4B /* close.png */,
 				DAE9978414F894D300E89F0A /* checked.png */,
 				DAE9978514F894D300E89F0A /* uncheck.png */,
@@ -578,6 +599,8 @@
 				DAE696A314F8F670006C1E4B /* UIImageActionSheet.m */,
 				DAE696A914F9212D006C1E4B /* UILoadingBox.h */,
 				DAE696AA14F9212D006C1E4B /* UILoadingBox.m */,
+				DAE7C2FD14FA237600CC6A85 /* AlertView.h */,
+				DAE7C2FE14FA237600CC6A85 /* AlertView.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -662,6 +685,12 @@
 				DAE9978614F894D300E89F0A /* checked.png in Resources */,
 				DAE9978714F894D300E89F0A /* uncheck.png in Resources */,
 				DAE696AD14F92A57006C1E4B /* close.png in Resources */,
+				DAE7C30714FA45A800CC6A85 /* chat.png in Resources */,
+				DAE7C30814FA45A800CC6A85 /* email.png in Resources */,
+				DAE7C30914FA45A800CC6A85 /* gear.png in Resources */,
+				DAE7C30A14FA45A800CC6A85 /* guest.png in Resources */,
+				DAE7C30B14FA45A800CC6A85 /* home.png in Resources */,
+				DAE7C30C14FA45A800CC6A85 /* schedule.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,8 +727,8 @@
 			files = (
 				DA51FAA914F0D8EA0088FEDF /* main.m in Sources */,
 				DA51FAAD14F0D8EA0088FEDF /* AppDelegate.m in Sources */,
-				DA51FAB614F0D8EA0088FEDF /* FirstViewController.m in Sources */,
-				DA51FABD14F0D8EA0088FEDF /* SecondViewController.m in Sources */,
+				DA51FAB614F0D8EA0088FEDF /* HomeViewController.m in Sources */,
+				DA51FABD14F0D8EA0088FEDF /* GuestViewController.m in Sources */,
 				DA51FF0414F0FF9C0088FEDF /* LoginViewController.m in Sources */,
 				DA51FF9714F108E50088FEDF /* WellcomeViewController.m in Sources */,
 				DA51FFB114F132F50088FEDF /* RigisterationViewController.m in Sources */,
@@ -741,7 +770,7 @@
 				DAB8BA1614F15912001312B8 /* Reachability.m in Sources */,
 				DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */,
 				DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */,
-				DAE9977D14F881F200E89F0A /* Definition.m in Sources */,
+				DAE9977D14F881F200E89F0A /* Global.m in Sources */,
 				DAE9978014F8859F00E89F0A /* Settings.m in Sources */,
 				DAE9978314F885B900E89F0A /* Config.m in Sources */,
 				DAE9978E14F89D4D00E89F0A /* EmailHelper.m in Sources */,
@@ -749,6 +778,7 @@
 				DAE696A414F8F670006C1E4B /* UIImageActionSheet.m in Sources */,
 				DAE696AB14F9212D006C1E4B /* UILoadingBox.m in Sources */,
 				DAE696B114F942E8006C1E4B /* RequestManager.m in Sources */,
+				DAE7C2FF14FA237600CC6A85 /* AlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

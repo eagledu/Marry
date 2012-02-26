@@ -22,7 +22,7 @@ UILoadingBox *loading=[[UILoadingBox alloc] initWithLoading:@"Loading..." showCl
 
 -(id) initWithLoading:(NSString *)message showCloseImage:(BOOL) showClose onClosed:(FuncBlock) onCompleted;
 -(void) showLoading;
-
+-(void) hideLoading;
 @end
 
 /* other method to show loading box

@@ -37,6 +37,16 @@
 	return @"";
 }
 
+- (NSString*)encodeURIComponent:(NSString *)string
+{
+	NSString *newString = [NSMakeCollectable(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR("!'()*~"), CFStringConvertNSStringEncodingToEncoding([self stringEncoding]))) autorelease];
+	if (newString) {
+		return newString;
+	}
+	return @"";
+}
+
+
 #pragma mark init / dealloc
 
 + (id)requestWithURL:(NSURL *)newURL

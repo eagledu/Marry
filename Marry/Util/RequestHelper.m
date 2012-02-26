@@ -7,6 +7,7 @@
 //
 
 #import "RequestHelper.h"
+#import "ASIFormDataRequest.h"
 
 @implementation RequestHelper
 
@@ -15,7 +16,7 @@
 {
     NSURL *urlObj = [NSURL URLWithString:url];
     __block ASIHTTPRequest __weak *request = [ASIHTTPRequest requestWithURL:urlObj];
-    [request setTimeOutSeconds:2*60];
+    [request setTimeOutSeconds:[Settings config].requestTimeout];
     [request setCompletionBlock:^{
         NSString *responseString = [request responseString];
         // Use when fetching binary data
@@ -54,7 +55,7 @@
 {
     NSURL *urlObj = [NSURL URLWithString:url];
     __block ASIHTTPRequest __weak *request = [ASIHTTPRequest requestWithURL:urlObj];
-    [request setTimeOutSeconds:2*60];
+    [request setTimeOutSeconds:[Settings config].requestTimeout];
     [request setCompletionBlock:^{
         NSString *responseString = [request responseString];
         RequestResult *result=[RequestHelper parseResult:responseString error:nil httpRequest:request];
@@ -111,5 +112,11 @@
         result=[[RequestResult alloc] init:NO error:error errorMsg:[error localizedDescription] extraData:responseString httpRequest:request];
     }
     return result;
+}
+
+#pragma mark utilities
++ (NSString*)encodeURIComponent:(NSString *)string
+{   
+	return [[[ASIFormDataRequest alloc] init] encodeURIComponent:string];
 }
 @end

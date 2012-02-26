@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Definition.h"
+#import "Global.h"
 #import "Config.h"
 @interface Settings : NSObject
 {
-    Definition *definitionInstance;
+    Global *globalInstance;
     Config *configInstance;
 }
 
-@property(nonatomic,strong) Definition *definitionInstance;
+@property(nonatomic,strong) Global *globalInstance;
 @property(nonatomic,strong) Config *configInstance;
 
 +(Config*) config;
-+(Definition*) definition;
++(Global*) global;
 +(Settings *) instance ;
 @end

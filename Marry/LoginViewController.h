@@ -24,8 +24,7 @@
 
 - (IBAction)loginButtonPressed:(id)sender;
 - (IBAction)didTextEditEnd:(UITextField*)sender;
-- (void)setTextFieldErrorCss:(UITextField*)txtField isError:(BOOL)error;
-- (BOOL)validateTextFieldErrorCss:(UITextField*)txtField;
+- (IBAction)didTextChanged:(id)sender;
 -(void)Login:(id)sender;
 -(void)CancelLogin:(id)sender;
 @end

@@ -11,19 +11,19 @@
 @implementation Settings
 
 @synthesize configInstance;
-@synthesize definitionInstance;
+@synthesize globalInstance;
 
 -(id)init
 {
     if(self=[super init]){
         configInstance=[[Config alloc] init];
-        definitionInstance=[[Definition alloc] init];
+        globalInstance=[[Global alloc] init];
     }
     return self;
 }
-+(Definition*) definition
++(Global*) global
 {
-    return  [Settings instance].definitionInstance;
+    return  [Settings instance].globalInstance;
 }
 +(Config*) config
 {
@@ -34,9 +34,7 @@
     static Settings *instance;    
     @synchronized(self) {
         if(!instance) {
-            instance = [[Settings alloc] init];
-            
-            
+            instance = [[Settings alloc] init];            
         }
     }    
     return instance;
