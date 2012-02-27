@@ -35,7 +35,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dau-Qc-7dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login" id="jhv-lQ-ife" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kis-3K-q3U">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="邮箱" lineBreakMode="tailTruncation" minimumFontSize="10" id="Y37-CH-hVK">
@@ -162,7 +162,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thb-Vy-dWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Registeration" id="g7A-KZ-FId" customClass="RigisterationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6N-w9-Liw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="邮箱地址" minimumFontSize="17" clearButtonMode="whileEditing" id="dMH-gV-688">
@@ -173,6 +173,7 @@
                                 <connections>
                                     <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="QnW-YD-7hl"/>
                                     <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="vMX-Dl-9Kk"/>
+                                    <action selector="txtBeginEdit:" destination="g7A-KZ-FId" eventType="editingDidBegin" id="Lqv-bK-X0c"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新郎姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="iZe-tO-QjA">
@@ -183,6 +184,7 @@
                                 <connections>
                                     <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="M76-qq-6C0"/>
                                     <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="Sfx-od-TP8"/>
+                                    <action selector="txtBeginEdit:" destination="g7A-KZ-FId" eventType="editingDidBegin" id="e7s-KR-N00"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="登陆密码" minimumFontSize="17" clearButtonMode="whileEditing" id="TBD-VK-9pM">
@@ -193,6 +195,7 @@
                                 <connections>
                                     <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="apK-3i-wrq"/>
                                     <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="9yA-hd-fQm"/>
+                                    <action selector="txtBeginEdit:" destination="g7A-KZ-FId" eventType="editingDidBegin" id="gnO-hO-70F"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新娘姓名" minimumFontSize="17" clearButtonMode="whileEditing" id="ZIr-ZS-fRl">
@@ -203,6 +206,7 @@
                                 <connections>
                                     <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="K41-eZ-dir"/>
                                     <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="6PV-0b-piN"/>
+                                    <action selector="txtBeginEdit:" destination="g7A-KZ-FId" eventType="editingDidBegin" id="KL3-0f-PwH"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="婚礼称谓" minimumFontSize="17" clearButtonMode="whileEditing" id="Tod-0f-23W">
@@ -213,6 +217,7 @@
                                 <connections>
                                     <action selector="didTextChanged:" destination="g7A-KZ-FId" eventType="editingChanged" id="S7U-Aa-LYR"/>
                                     <action selector="didTextEditEnd:" destination="g7A-KZ-FId" eventType="editingDidEndOnExit" id="rKL-kf-DiQ"/>
+                                    <action selector="txtBeginEdit:" destination="g7A-KZ-FId" eventType="editingDidBegin" id="056-LD-obj"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Pm-qe-CWb">
@@ -264,7 +269,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYZ-Qe-y8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Forget Password" id="t46-GH-JOb" customClass="ForgetPasswordViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AFP-bK-ZGk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="找回密码" lineBreakMode="tailTruncation" minimumFontSize="10" id="hPg-ra-Ffh">
@@ -323,7 +328,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydd-qW-EUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qN7-mz-ARb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErN-41-Ycb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="日程安排" lineBreakMode="tailTruncation" minimumFontSize="10" id="kdT-92-QKw">
@@ -361,7 +366,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zef-l4-JzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EMQ-yR-FHM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xon-Rn-A8T">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="大日子" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="iyy-zZ-6Q2">
@@ -391,7 +396,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36g-Xj-nob" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="iKY-ot-x1F" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cD-PE-n5T">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="更多设置" lineBreakMode="tailTruncation" minimumFontSize="10" id="cpd-SM-SKB">
@@ -429,7 +434,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOI-Ae-4tH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DB6-6x-UQm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cAn-w1-LAz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="宾客管理" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="icr-29-Hp8">
@@ -459,7 +464,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFY-bm-3Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pWe-2J-Xwm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxG-Z0-vcc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -548,6 +553,7 @@
                 <relationship kind="action" name="didTextChanged:"/>
                 <relationship kind="action" name="didTextEditEnd:" candidateClass="UITextField"/>
                 <relationship kind="action" name="registerLoginAccount:"/>
+                <relationship kind="action" name="txtBeginEdit:"/>
                 <relationship kind="outlet" name="btnReg" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="txtBigDateName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtBrideName" candidateClass="UITextField"/>
@@ -568,7 +574,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="MrK-Zu-zb1"/>
-    </inferredMetricsTieBreakers>
 </document>

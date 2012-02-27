@@ -20,5 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnReg;
 - (IBAction)registerLoginAccount:(id)sender;
 - (IBAction)didTextEditEnd:(UITextField*)sender;
+- (IBAction)txtBeginEdit:(id)sender;
 - (IBAction)didTextChanged:(id)sender;
+-(void) setCenterPoint:(CGFloat) y;
 @end

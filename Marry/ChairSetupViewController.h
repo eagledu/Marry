@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChairSetup : UIViewController
+@interface ChairSetupViewController : UIViewController
 
 @end

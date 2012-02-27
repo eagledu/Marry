@@ -124,12 +124,31 @@
 }
 
 - (IBAction)didTextEditEnd:(UITextField*)sender {
-    
     [sender resignFirstResponder];
     [UIHelper validateTextFieldErrorCss:sender];
-    [UIHelper alternateTextField:self];    
+    if(![UIHelper alternateTextField:self])
+    {
+        [self setCenterPoint:0] ;
+    }
 }
 
+- (IBAction)txtBeginEdit:(id)sender {
+    UITextView *textView=sender;    
+    float height= textView.center.y> self.view.frame.size.height/2-textView.frame.size.height*3?(self.view.frame.size.height/2-textView.frame.size.height*3): self.view.frame.size.height/2;
+    [self setCenterPoint:height];
+    NSLog(@"%f",height);
+}
+
+-(void) setCenterPoint:(CGFloat) y
+{
+    y=y==0?self.view.frame.size.height/2:y;
+    NSTimeInterval animationDuration=0.40f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    float width=self.view.frame.size.width;
+    self.view.center=CGPointMake(width/2, y);
+    [UIView commitAnimations];
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {    
     //UITouch *touch = [[event allTouches] anyObject];
@@ -140,6 +159,7 @@
             [view resignFirstResponder];
         }
     }
+    [self setCenterPoint:0];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

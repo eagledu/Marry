@@ -3,25 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__29-[LoginViewController Login:]_block_invoke_0:LoginViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "imgUnCheck.hidden">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoginViewController setTextFieldErrorCss:error:]:LoginViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "txtField.layer">
-            </PersistentString>
-            <PersistentString
-               value = "txtField.layer.masksToBounds">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[LoginViewController touchesBegan:withEvent:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -37,6 +18,25 @@
             </PersistentString>
             <PersistentString
                value = "txtPwd.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController setTextFieldErrorCss:error:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "txtField.layer">
+            </PersistentString>
+            <PersistentString
+               value = "txtField.layer.masksToBounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__29-[LoginViewController Login:]_block_invoke_0:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "imgUnCheck.hidden">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -59,6 +59,17 @@
             </PersistentString>
             <PersistentString
                value = "errorStr.length">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RigisterationViewController txtBeginEdit:]:RigisterationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame.size">
+            </PersistentString>
+            <PersistentString
+               value = "textView.cneter">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

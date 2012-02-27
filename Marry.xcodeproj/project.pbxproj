@@ -85,6 +85,7 @@
 		DAE7C31214FA492D00CC6A85 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C31114FA492D00CC6A85 /* MoreViewController.m */; };
 		DAE7C31914FA54C400CC6A85 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31714FA54C400CC6A85 /* calendar.png */; };
 		DAE7C31A14FA54C400CC6A85 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31814FA54C400CC6A85 /* radar.png */; };
+		DAE7C31D14FA57F200CC6A85 /* ChairSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C31C14FA57F200CC6A85 /* ChairSetupViewController.m */; };
 		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
 		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
 		DAE9977D14F881F200E89F0A /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9977C14F881F200E89F0A /* Global.m */; };
@@ -245,6 +246,8 @@
 		DAE7C31114FA492D00CC6A85 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		DAE7C31714FA54C400CC6A85 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = Images/calendar.png; sourceTree = "<group>"; };
 		DAE7C31814FA54C400CC6A85 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radar.png; path = Images/radar.png; sourceTree = "<group>"; };
+		DAE7C31B14FA57F200CC6A85 /* ChairSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairSetupViewController.h; sourceTree = "<group>"; };
+		DAE7C31C14FA57F200CC6A85 /* ChairSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairSetupViewController.m; sourceTree = "<group>"; };
 		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
 		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
 		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
@@ -432,6 +435,8 @@
 				DAE7C30E14FA490300CC6A85 /* ScheduleViewController.m */,
 				DAE7C31014FA492C00CC6A85 /* MoreViewController.h */,
 				DAE7C31114FA492D00CC6A85 /* MoreViewController.m */,
+				DAE7C31B14FA57F200CC6A85 /* ChairSetupViewController.h */,
+				DAE7C31C14FA57F200CC6A85 /* ChairSetupViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 				DAE7C2FF14FA237600CC6A85 /* AlertView.m in Sources */,
 				DAE7C30F14FA490300CC6A85 /* ScheduleViewController.m in Sources */,
 				DAE7C31214FA492D00CC6A85 /* MoreViewController.m in Sources */,
+				DAE7C31D14FA57F200CC6A85 /* ChairSetupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
