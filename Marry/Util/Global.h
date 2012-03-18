@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 @interface Global : NSObject
 {
-    NSString * _registeredEmail;
+    
 }
 @property (nonatomic,strong) NSString *registeredEmail; 
 @end

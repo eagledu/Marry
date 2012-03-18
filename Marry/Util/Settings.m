@@ -16,8 +16,8 @@
 -(id)init
 {
     if(self=[super init]){
-        configInstance=[[Config alloc] init];
-        globalInstance=[[Global alloc] init];
+        self.configInstance=[[Config alloc] init];
+        self.globalInstance=[[Global alloc] init];
     }
     return self;
 }

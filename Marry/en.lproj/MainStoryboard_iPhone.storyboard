@@ -25,6 +25,7 @@
                     </view>
                     <connections>
                         <segue destination="2mu-Pu-AbQ" kind="modal" identifier="Login" id="Yao-2P-FCa"/>
+                        <segue destination="4" kind="modal" identifier="DirectToMainWindow" modalTransitionStyle="coverVertical" id="QP1-cH-V3k"/>
                     </connections>
                 </viewController>
             </objects>
@@ -321,27 +322,44 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="778" y="410"/>
+            <point key="canvasLocation" x="556" y="410"/>
         </scene>
         <scene sceneID="ZeV-HM-sMp">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydd-qW-EUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qN7-mz-ARb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ErN-41-Ycb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="日程安排" lineBreakMode="tailTruncation" minimumFontSize="10" id="kdT-92-QKw">
-                                <rect key="frame" x="76" y="38" width="107" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="日程安排" id="p5b-md-vwe"/>
+                <viewController title="宾客管理" id="qN7-mz-ARb" customClass="GuestViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L9n-aA-x7X">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GuestTableCellIdentifier" rowHeight="40" id="C1y-tz-wdD">
+                                <rect key="frame" x="0.0" y="22" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="MER-Nx-3Ao">
+                                            <rect key="frame" x="8" y="9" width="259" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="宾客管理" id="p5b-md-vwe">
+                        <barButtonItem key="leftBarButtonItem" title="编辑" id="D9B-Ro-Cdc"/>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="gVM-C6-oFi"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="guestTableView" destination="L9n-aA-x7X" id="EoN-ok-y3q"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1851" y="484"/>
@@ -359,14 +377,14 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="1317" y="484"/>
+            <point key="canvasLocation" x="1243" y="484"/>
         </scene>
         <scene sceneID="w81-dg-6Yb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zef-l4-JzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EMQ-yR-FHM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xon-Rn-A8T">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="大日子" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="iyy-zZ-6Q2">
@@ -396,7 +414,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36g-Xj-nob" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="iKY-ot-x1F" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cD-PE-n5T">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="更多设置" lineBreakMode="tailTruncation" minimumFontSize="10" id="cpd-SM-SKB">
@@ -434,10 +452,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOI-Ae-4tH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DB6-6x-UQm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cAn-w1-LAz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="宾客管理" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="icr-29-Hp8">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="日程安排" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="icr-29-Hp8">
                                 <rect key="frame" x="54" y="98" width="212" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -454,7 +472,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="宾客列表" id="ena-65-EMc"/>
+                    <navigationItem key="navigationItem" title="日程安排" id="ena-65-EMc"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1851" y="1163"/>
@@ -464,7 +482,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFY-bm-3Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pWe-2J-Xwm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxG-Z0-vcc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -532,6 +550,12 @@
         <class className="ForgetPasswordViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ForgetPasswordViewController.h"/>
         </class>
+        <class className="GuestViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="guestTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
@@ -574,4 +598,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="QP1-cH-V3k"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -18,11 +18,11 @@
 -(id)init:(BOOL) isSuccess error:(NSError *)err errorMsg:(NSString*) errMsg extraData:(id) extra httpRequest:(ASIHTTPRequest*) request;
 {
     if(self=[super init]){
-        success=isSuccess;
-        error=err;
-        errorMsg=errMsg;
-        extraData=extra;
-        requestXHR=request;
+        self.success=isSuccess;
+        self.error=err;
+        self.errorMsg=errMsg;
+        self.extraData=extra;
+        self.requestXHR=request;
     }
     return self;
 }

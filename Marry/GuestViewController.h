@@ -7,7 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
+#import "MarryPagingResult.h"
+#import "RequestManager.h"
 
-@interface GuestViewController : UIViewController
+#define kNameValueTag 1
+
+@interface GuestViewController : UITableViewController  <EGORefreshTableHeaderDelegate, UITableViewDelegate, UITableViewDataSource>
+{
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	BOOL isFlage; 
+	//  Reloading var should really be your tableviews datasource
+	//  Putting it here for demo purposes 
+	BOOL _reloading;
+    UITableView *_myTableView;
+    MarryPagingResult *_pagingResult;
+    ASIHTTPRequest *request;
+    NSArray *_guestList;
+    NSArray *_guestCategoryList;
+    int _currentPageIndex;
+    int _pageSize;
+    BOOL _needToRefresh;
+}
+@property (strong, nonatomic) IBOutlet UITableView *guestTableView;
+
+- (void)reloadTableViewDataSource:(FuncBlock) onCompleted;
+- (void)doneLoadingTableViewData;
 
 @end

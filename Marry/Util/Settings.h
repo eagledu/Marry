@@ -11,8 +11,6 @@
 #import "Config.h"
 @interface Settings : NSObject
 {
-    Global *globalInstance;
-    Config *configInstance;
 }
 
 @property(nonatomic,strong) Global *globalInstance;

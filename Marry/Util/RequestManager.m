@@ -29,7 +29,37 @@
 
 -(void)dealloc
 {
+    
+}
 
+#pragma GetList
+
++(ASIHTTPRequest *) getListWithUrl:(NSString *) url async:(BOOL) async params:(NSDictionary *)params pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL) asc funCompleted: (FuncJsonResultBlock) onCompleted;
+{    
+    NSMutableString *pars=[[NSMutableString alloc] initWithString:url];
+    [pars appendString:[NSString stringWithFormat:@"&IsAsc=%s",asc==YES?"1":"0"]];
+    if (pageIndex>0) {
+        [pars appendString:[NSString stringWithFormat:@"&PageIndex=%d",pageIndex]];
+    }
+    if(pageSize>0){
+        [pars appendString:[NSString stringWithFormat:@"&PageSize=%d",pageSize]];
+    }
+    if(sortBy!=nil&&sortBy.length>0)
+    {
+        [pars appendString:[NSString stringWithFormat:@"&SortBy=%@",[RequestHelper encodeURIComponent:sortBy]]];
+    } 
+    if (params!=nil) {
+        for (NSString *key in params.allKeys) {
+            [pars appendString:[NSString stringWithFormat:@"&%@=%@",key,[RequestHelper
+                                                                         encodeURIComponent:[params objectForKey:key]]]];            
+        }
+    }
+    if(async){
+        return [RequestHelper getJsonInBackground:pars funCompleted:onCompleted]; 
+    }
+    else{
+        return [RequestHelper getJsonSynchronous:pars funCompleted:onCompleted]; 
+    }
 }
 
 #pragma mark Login 
@@ -48,5 +78,13 @@
 {
     NSString *url=[NSString stringWithFormat:@"http://gzuat.vicp.net/Wedding/App/User.ashx?operation=register&RG_LoginEmail=%@&RG_LoginPassword=%@&RG_CroomName=%@&RG_BrideName=%@&RG_BigDateName=%@",[RequestHelper encodeURIComponent:email],[RequestHelper encodeURIComponent:password],[RequestHelper encodeURIComponent:groomName],[RequestHelper encodeURIComponent:brideName],[RequestHelper encodeURIComponent:bigDateName]];
     return [RequestHelper getJsonInBackground:url funCompleted:onCompleted]; 
+}
+
+#pragma mark Guest
+
++(ASIHTTPRequest *) getGuestList:(NSString *)guestName async:(BOOL) async pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL)asc funCompleted: (FuncJsonResultBlock) onCompleted;
+{    
+    NSDictionary *params=[NSDictionary dictionaryWithObjectsAndKeys:guestName, @"GuestSch_GuestName_en_us",nil];
+    return [RequestManager getListWithUrl:@"http://gzuat.vicp.net/Wedding/App/Guest.ashx?operation=get"   async:async params:params pageIndex:pageIndex pageSize:pageSize sortBy:sortBy asc:asc funCompleted:onCompleted]; 
 }
 @end

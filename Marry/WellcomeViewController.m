@@ -44,7 +44,10 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"Login" sender:self];
+    //如果已经登陆过，直接跳转到主页面，否则，需进行登陆
+    [self performSegueWithIdentifier:@"DirectToMainWindow" sender:self];
+    //[self performSegueWithIdentifier:@"Login" sender:self];
+    
 }
 
 #pragma mark - View lifecycle

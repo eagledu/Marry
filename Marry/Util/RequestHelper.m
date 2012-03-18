@@ -70,7 +70,7 @@
     return request;
 }
 
-+ (void)getJsonSynchronous:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted
++ (ASIHTTPRequest*)getJsonSynchronous:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted
 {
     NSURL *urlObj = [NSURL URLWithString:url];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:urlObj];
@@ -80,7 +80,44 @@
     responseString = [request responseString];
     RequestResult *result=[RequestHelper parseResult:responseString error:error httpRequest:request];    
     onCompleted(result);
+    return request;
 }
+
+#pragma remark Post Form
+
++(ASIFormDataRequest*)postJsonInBackground:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted
+{
+    NSURL *urlObj = [NSURL URLWithString:url];
+    __block ASIFormDataRequest __weak *request = [ASIFormDataRequest requestWithURL:urlObj];
+    [request setTimeOutSeconds:[Settings config].requestTimeout];
+    [request setCompletionBlock:^{
+        NSString *responseString = [request responseString];
+        RequestResult *result=[RequestHelper parseResult:responseString error:nil httpRequest:request];
+        onCompleted(result);
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+        RequestResult *result=[[RequestResult alloc] init:NO error:error errorMsg:[error localizedDescription] extraData:nil httpRequest:request];
+        onCompleted(result);
+    }];
+    [request startAsynchronous]; 
+    return request;
+}
+
++ (ASIFormDataRequest*)postJsonSynchronous:(NSString*)url funCompleted: (FuncJsonResultBlock) onCompleted
+{
+    NSURL *urlObj = [NSURL URLWithString:url];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:urlObj];
+    [request startSynchronous];
+    NSError *error = [request error];
+    NSString *responseString;
+    responseString = [request responseString];
+    RequestResult *result=[RequestHelper parseResult:responseString error:error httpRequest:request];    
+    onCompleted(result);
+    return request;
+}
+
+#pragma remark Parse Result
 +(RequestResult*)parseResult:(NSString*)responseString error:(NSError *)error httpRequest:(ASIHTTPRequest*)request
 {
     RequestResult *result=nil;
@@ -94,9 +131,10 @@
             NSMutableDictionary *resultObj = (NSMutableDictionary*)[parser objectWithString:responseString];
             if(resultObj!=nil){
                 NSString *errorStr= [resultObj objectForKey:@"Error"];
-                if(errorStr==nil ||errorStr.length==0)
+                if(errorStr==nil||[errorStr isEqualToString:@""])
                 {
-                    result=[[RequestResult alloc] init:YES error:error errorMsg:nil extraData:responseString httpRequest:request];        
+                    id extraData= [resultObj objectForKey:@"Result"];
+                    result=[[RequestResult alloc] init:YES error:error errorMsg:nil extraData:extraData httpRequest:request];        
                 }
                 else{
                     result=[[RequestResult alloc] init:NO error:error errorMsg:errorStr extraData:resultObj httpRequest:request];        

@@ -11,11 +11,7 @@
 
 @interface RequestResult : NSObject
 {
-    BOOL success;
-    NSError *error;
-    NSString *errorMsg;
-    id extraData;
-    ASIHTTPRequest *requestXHR;
+    
 }
 
 @property(nonatomic) BOOL success;

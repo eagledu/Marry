@@ -22,4 +22,8 @@
                           brideName:(NSString *) brideName
                         BigDateName:(NSString *) bigDateName
                        funCompleted: (FuncJsonResultBlock) onCompleted;
+
++(ASIHTTPRequest *) getListWithUrl:(NSString *) url async:(BOOL) async params:(NSDictionary *)params pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL) asc funCompleted: (FuncJsonResultBlock) onCompleted;
+
++(ASIHTTPRequest *) getGuestList:(NSString *)guestName async:(BOOL) async pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL)asc funCompleted: (FuncJsonResultBlock) onCompleted;
 @end

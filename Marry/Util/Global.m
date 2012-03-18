@@ -13,7 +13,7 @@
 -(id)init
 {
     if(self=[super init]){
-        _registeredEmail=nil;
+ 
     }
     return self;
 }

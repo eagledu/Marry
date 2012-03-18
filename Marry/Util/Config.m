@@ -15,7 +15,7 @@
     self=[super init];
     if(self)
     {
-        _requestTimeout=60;
+        self.requestTimeout=60;
     }
     return  self;
 }

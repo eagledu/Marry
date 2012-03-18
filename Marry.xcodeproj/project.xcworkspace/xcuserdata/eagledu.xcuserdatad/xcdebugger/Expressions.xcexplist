@@ -55,10 +55,19 @@
                value = "errorStr==nil">
             </PersistentString>
             <PersistentString
-               value = "[resultObj objectForKey:@&quot;Error&quot;]">
+               value = "errorStr.length">
             </PersistentString>
             <PersistentString
-               value = "errorStr.length">
+               value = "errorStr==@&quot;&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "errorStr!=nil">
+            </PersistentString>
+            <PersistentString
+               value = "(__NSCFConstantString *)errorStr">
+            </PersistentString>
+            <PersistentString
+               value = "[resultObj objectForKey:@&quot;Error&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,6 +79,25 @@
             </PersistentString>
             <PersistentString
                value = "textView.cneter">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__34-[GuestViewController viewDidLoad]_block_invoke_0:GuestViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "result.extraData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GuestViewController tableView:cellForRowAtIndexPath:]:GuestViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__31-[GuestViewController getGuest]_block_invoke_0:GuestViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_pagingResult">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
