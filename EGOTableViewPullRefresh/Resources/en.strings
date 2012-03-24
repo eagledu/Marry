@@ -1,0 +1,13 @@
+/* 
+  en.strings
+  Marry
+
+  Created by Eagle Du on 12/3/24.
+  Copyright (c) 2012年 GET. All rights reserved.
+*/
+"Last Updated: %@"= "Last Updated: %@";
+"Release to refresh..."="Release to refresh...";
+"Pull down to refresh..."="Pull down to refresh...";
+"Loading..."="Loading...";
+"Pull up to load more..."="Pull up to load more ...";
+"Release to load more..."="Release to load more...";

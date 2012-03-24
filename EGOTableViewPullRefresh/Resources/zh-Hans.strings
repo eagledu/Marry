@@ -1,0 +1,13 @@
+/* 
+  zh-Hans.strings
+  Marry
+
+  Created by Eagle Du on 12/3/24.
+  Copyright (c) 2012年 GET. All rights reserved.
+*/
+"Last Updated: %@"= "最后更新：%@";
+"Release to refresh..."="松开立即更新..";
+"Pull down to refresh..."="下拉即可更新...";
+"Loading..."="加载中...";
+"Pull up to load more..."="上拉即可获取更多...";
+"Release to load more..."="松开获取更多...";

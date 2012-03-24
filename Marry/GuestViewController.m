@@ -8,7 +8,7 @@
 
 #import "GuestViewController.h"
 @interface GuestViewController (Private)
--(void)getGuest:(FuncBlock) onCompleted;
+-(void)getGuest:(BOOL) refresh onCompleted:(FuncBlock) onCompleted;
 @end
 
 @implementation GuestViewController
@@ -24,20 +24,19 @@
 
 - (void)viewDidLoad
 {
-    _currentPageIndex=1;
-    _pageSize=5;
+    _schParams=[[MarryPagingSchParams alloc] init:nil pagingInfo:[[MarryPagingInfo alloc] init:5 pageIndex:1 sortBy:@"GuestName_en_us" asc:YES]];
     _pagingResult=[[MarryPagingResult alloc] init];
     _pagingResult.Total=0;
     _pagingResult.Result=nil;
     
-    [super viewDidLoad];
+    [super viewDidLoad];     
 	// Do any additional setup after loading the view, typically from a nib.
     if (_refreshHeaderView == nil) { 
         EGORefreshTableHeaderView *view1 = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height) tableView:_guestTableView];
         view1.delegate = self; 
         [self.guestTableView addSubview:view1]; 
         _refreshHeaderView = view1; 
-    }  
+    }
     [_refreshHeaderView egoInitLoading:self.guestTableView];
 }
 
@@ -45,9 +44,9 @@
 {
     [self setGuestTableView:nil];
     [super viewDidUnload];
-    _myTableView=nil;
     _pagingResult=nil;
     request=nil;
+    _schParams=nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -96,7 +95,8 @@
     return 1;
 } 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { 
-    NSInteger count=_pagingResult.Result!=nil?_pagingResult.Result.count:0;
+    NSInteger count=_pagingResult.Result!=nil?_pagingResult.Result.count:0;    
+    tableView.separatorStyle =count>0?UITableViewCellSeparatorStyleSingleLine:UITableViewCellSeparatorStyleNone;
     return count; 
 } 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { 
@@ -111,7 +111,6 @@
     NSDictionary *rowData = [_pagingResult.Result objectAtIndex:row];
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:kNameValueTag];
     nameLabel.text = [rowData objectForKey:@"GuestName_en_us"];
-	
     return cell; 
 } 
 /*
@@ -126,7 +125,7 @@
 - (void)reloadTableViewDataSource:(FuncBlock) onCompleted{ 
     NSLog(@"==开始加载数据"); 
     _reloading = YES; 
-    [self getGuest:onCompleted];
+    [self getGuest:_refreshHeaderView.isTopRefresh onCompleted:onCompleted];
 }
 
 - (void)doneLoadingTableViewData{ 
@@ -160,53 +159,61 @@
     return [NSDate date];     
 } 
 
+- (CGFloat)egoContentViewHeight:(EGORefreshTableHeaderView*)view{
+    CGFloat height=0;
+    for(int i=0;i<self.tableView.numberOfSections;i++)
+    {         
+        NSInteger rows=[self.tableView numberOfRowsInSection:i];
+        //rows=rows==0?5:rows;
+        height+=self.tableView.rowHeight*rows;
+    } 
+    return  height;
+}
+
 #pragma mark Private Function
 
--(void)getGuest:(FuncBlock) onCompleted{
-    BOOL isAppend=FALSE;
-    if(_needToRefresh){
-        _currentPageIndex=1;
+-(void)getGuest:(BOOL) refresh onCompleted: (FuncBlock) onCompleted{
+    BOOL isAppend;
+    if(refresh){
+        _schParams.PagingInfo.PageIndex=1;
+        isAppend=NO;
     }
-    if(_pagingResult.Total!=0){
-        NSInteger pageNum=_pagingResult.Total/_pageSize+(_pagingResult.Total%_pageSize==0?0:1);
-        if(pageNum>_currentPageIndex){
-            _currentPageIndex++;
-            if(_needToRefresh)
-                isAppend=NO;
-            else
-                isAppend=YES;
-        }
-        else{
-            if(!_needToRefresh)
-            {
-                
-            } 
+    else{
+        _schParams.PagingInfo.PageIndex++;
+        isAppend=YES;
+        if (_schParams.PagingInfo.PageIndex>_schParams.PagingInfo.PageSize) {
+            onCompleted();
+            return;
         }
     }
-    request = [RequestManager getGuestList:nil async:YES pageIndex:_currentPageIndex pageSize:_pageSize sortBy:nil asc:YES funCompleted:^(RequestResult *result) {
-        if(result.success){
-            
-            MarryPagingResult *tempPagingResult=[[MarryPagingResult alloc] initWithResult:result.extraData];
-            if(_pagingResult!=nil&&_pagingResult.Total!=0&&_pagingResult.Total!=tempPagingResult.Total){
-                _needToRefresh=YES;
-            }
+    NSLog(@"%d",_schParams.PagingInfo.PageIndex);
+    request = [RequestManager getGuestList:_schParams async:YES funCompleted:^(RequestResult *result) {
+        if(result.success){            
+            MarryPagingResult *tempPagingResult=[[MarryPagingResult alloc] initWithResult:result.extraData pagingInfo:_schParams.PagingInfo];
             if(isAppend){               
                 NSMutableArray *guestList=[[NSMutableArray alloc] initWithArray:_pagingResult.Result];
                 [guestList addObjectsFromArray:tempPagingResult.Result];
                 _pagingResult.Result=guestList;
                 _pagingResult.Total=tempPagingResult.Total;
+                _pagingResult.PagingInfo=tempPagingResult.PagingInfo;
             }
             else
             {
                 _pagingResult=tempPagingResult;
             }
-            
+            NSLog(@"%d",_pagingResult.PagingInfo.PageIndex);
             if(_pagingResult==nil)
             {
-                [UIHelper showAlert:@"更新数据失败" message:@"数据解析有误！" delegate:nil];
+                [UIHelper showAlert:NSLocalizedString(@"Fail to load guest list", @"") message:@"数据解析有误！" delegate:nil];
                 onCompleted();
             }
-            else{
+            else{                
+                if(_pagingResult.PageNum==_pagingResult.PagingInfo.PageIndex){
+                    _refreshHeaderView.hasMoreData=NO;
+                }
+                else{
+                    _refreshHeaderView.hasMoreData=YES;
+                }
                 onCompleted();
             }
         }

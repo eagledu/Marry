@@ -33,6 +33,7 @@ typedef enum{
 	EGOOPullRefreshLoading,
     EGOOPullFooterRefreshPulling,
 	EGOOPullFooterRefreshLoading,
+    EGOOPullFooterRefreshNormal,
 } EGOPullRefreshState;
 
 @protocol EGORefreshTableHeaderDelegate;
@@ -49,11 +50,20 @@ typedef enum{
     UIActivityIndicatorView *_footerActivityView;
 	UIActivityIndicatorView *_activityView;
 	UITableView *_tableView;
-
+    BOOL _isTopRefresh;
+    CGPoint _previousOffSet;
+    BOOL _hasMoreData;
+    BOOL _hideLoadMoreTip;
+    BOOL _showMessageAfterRefreshed;
+    UIView *_messageView;
 }
 
 @property(nonatomic,strong) id <EGORefreshTableHeaderDelegate> delegate;
-@property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) UIView *lastContenView;
+@property BOOL isTopRefresh;//是否向上刷新
+@property BOOL hasMoreData;
+@property BOOL hideLoadMoreTip;
+@property BOOL showMessageAfterRefreshed;
 
 - (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor tableView:(UITableView *)tableView;
 - (id)initWithFrame:(CGRect)frame tableView:(UITableView *)tableView;
@@ -66,6 +76,8 @@ typedef enum{
 @protocol EGORefreshTableHeaderDelegate
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view;
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view;
+- (CGFloat)egoContentViewHeight:(EGORefreshTableHeaderView*)view;
+
 @optional
 - (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view;
 @end

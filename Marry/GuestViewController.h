@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 #import "MarryPagingResult.h"
+#import "MarryPagingSchParams.h"
 #import "RequestManager.h"
 
 #define kNameValueTag 1
@@ -20,14 +21,11 @@
 	//  Reloading var should really be your tableviews datasource
 	//  Putting it here for demo purposes 
 	BOOL _reloading;
-    UITableView *_myTableView;
     MarryPagingResult *_pagingResult;
     ASIHTTPRequest *request;
     NSArray *_guestList;
     NSArray *_guestCategoryList;
-    int _currentPageIndex;
-    int _pageSize;
-    BOOL _needToRefresh;
+    MarryPagingSchParams *_schParams;
 }
 @property (strong, nonatomic) IBOutlet UITableView *guestTableView;
 

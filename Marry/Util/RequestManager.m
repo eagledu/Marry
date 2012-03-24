@@ -34,7 +34,7 @@
 
 #pragma GetList
 
-+(ASIHTTPRequest *) getListWithUrl:(NSString *) url async:(BOOL) async params:(NSDictionary *)params pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL) asc funCompleted: (FuncJsonResultBlock) onCompleted;
++(ASIHTTPRequest *) getListWithUrl:(NSString *) url byPost:(BOOL) byPost async:(BOOL) async params:(NSDictionary *)params pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL) asc funCompleted: (FuncJsonResultBlock) onCompleted
 {    
     NSMutableString *pars=[[NSMutableString alloc] initWithString:url];
     [pars appendString:[NSString stringWithFormat:@"&IsAsc=%s",asc==YES?"1":"0"]];
@@ -54,12 +54,27 @@
                                                                          encodeURIComponent:[params objectForKey:key]]]];            
         }
     }
-    if(async){
-        return [RequestHelper getJsonInBackground:pars funCompleted:onCompleted]; 
+    if(byPost){
+        if(async){
+            return [RequestHelper postJsonInBackground:pars funCompleted:onCompleted]; 
+        }
+        else{
+            return [RequestHelper postJsonSynchronous:pars funCompleted:onCompleted]; 
+        }
     }
     else{
-        return [RequestHelper getJsonSynchronous:pars funCompleted:onCompleted]; 
+        if(async){
+            return [RequestHelper getJsonInBackground:pars funCompleted:onCompleted]; 
+        }
+        else{
+            return [RequestHelper getJsonSynchronous:pars funCompleted:onCompleted]; 
+        }
     }
+}
+
++(ASIHTTPRequest *) getListWithUrl:(NSString *) url byPost:(BOOL) byPost async:(BOOL) async params:(MarryPagingSchParams *)params funCompleted: (FuncJsonResultBlock) onCompleted
+{
+    return [RequestManager getListWithUrl:url byPost:byPost async:async params:params.SearchParams pageIndex:params.PagingInfo.PageIndex pageSize:params.PagingInfo.PageSize sortBy:params.PagingInfo.SortBy asc:params.PagingInfo.Asc funCompleted:onCompleted];
 }
 
 #pragma mark Login 
@@ -82,9 +97,8 @@
 
 #pragma mark Guest
 
-+(ASIHTTPRequest *) getGuestList:(NSString *)guestName async:(BOOL) async pageIndex:(NSInteger) pageIndex pageSize:(NSInteger) pageSize sortBy:(NSString *) sortBy asc:(BOOL)asc funCompleted: (FuncJsonResultBlock) onCompleted;
++(ASIHTTPRequest *) getGuestList:(MarryPagingSchParams*) params async:(BOOL) async funCompleted: (FuncJsonResultBlock) onCompleted
 {    
-    NSDictionary *params=[NSDictionary dictionaryWithObjectsAndKeys:guestName, @"GuestSch_GuestName_en_us",nil];
-    return [RequestManager getListWithUrl:@"http://gzuat.vicp.net/Wedding/App/Guest.ashx?operation=get"   async:async params:params pageIndex:pageIndex pageSize:pageSize sortBy:sortBy asc:asc funCompleted:onCompleted]; 
+    return [RequestManager getListWithUrl:@"http://gzuat.vicp.net/Wedding/App/Guest.ashx?operation=get"   byPost:YES async:async params:params funCompleted:onCompleted]; 
 }
 @end

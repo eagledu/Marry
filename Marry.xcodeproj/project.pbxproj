@@ -82,14 +82,17 @@
 		DAE7C31914FA54C400CC6A85 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31714FA54C400CC6A85 /* calendar.png */; };
 		DAE7C31A14FA54C400CC6A85 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE7C31814FA54C400CC6A85 /* radar.png */; };
 		DAE7C31D14FA57F200CC6A85 /* ChairSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7C31C14FA57F200CC6A85 /* ChairSetupViewController.m */; };
+		DAE7D82E151DE02500AD5CA0 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D82D151DE02500AD5CA0 /* en.strings */; };
+		DAE7D831151DE03200AD5CA0 /* zh-Hans.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D830151DE03200AD5CA0 /* zh-Hans.strings */; };
+		DAE7D833151DE04A00AD5CA0 /* zh-Hant.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D832151DE04A00AD5CA0 /* zh-Hant.strings */; };
+		DAE7D83E151E064100AD5CA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D83C151E064100AD5CA0 /* Localizable.strings */; };
+		DAE7D842151E064A00AD5CA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D840151E064A00AD5CA0 /* Localizable.strings */; };
 		DAE7EAFB15178FAD00A7E5C7 /* MarryPagingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7EAF815178FAD00A7E5C7 /* MarryPagingInfo.m */; };
 		DAE7EAFC15178FAD00A7E5C7 /* MarryPagingSchParams.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7EAFA15178FAD00A7E5C7 /* MarryPagingSchParams.m */; };
 		DAE7EB0D151790FE00A7E5C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB05151790FE00A7E5C7 /* InfoPlist.strings */; };
 		DAE7EB0E151790FE00A7E5C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB07151790FE00A7E5C7 /* Localizable.strings */; };
 		DAE7EB0F151790FE00A7E5C7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB09151790FE00A7E5C7 /* MainStoryboard_iPad.storyboard */; };
 		DAE7EB10151790FE00A7E5C7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB0B151790FE00A7E5C7 /* MainStoryboard_iPhone.storyboard */; };
-		DAE7EB181517912500A7E5C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB131517912500A7E5C7 /* Localizable.strings */; };
-		DAE7EB191517912500A7E5C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE7EB161517912500A7E5C7 /* Localizable.strings */; };
 		DAE8F06A14F6926A00CD0A6B /* RequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06914F6926A00CD0A6B /* RequestHelper.m */; };
 		DAE8F06E14F69AA500CD0A6B /* RequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8F06D14F69AA500CD0A6B /* RequestResult.m */; };
 		DAE9727A1514668F00AB8F66 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE972701514668F00AB8F66 /* EGORefreshTableHeaderView.m */; };
@@ -261,6 +264,11 @@
 		DAE7C31814FA54C400CC6A85 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radar.png; path = Images/radar.png; sourceTree = "<group>"; };
 		DAE7C31B14FA57F200CC6A85 /* ChairSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairSetupViewController.h; sourceTree = "<group>"; };
 		DAE7C31C14FA57F200CC6A85 /* ChairSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairSetupViewController.m; sourceTree = "<group>"; };
+		DAE7D82D151DE02500AD5CA0 /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
+		DAE7D830151DE03200AD5CA0 /* zh-Hans.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "zh-Hans.strings"; sourceTree = "<group>"; };
+		DAE7D832151DE04A00AD5CA0 /* zh-Hant.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "zh-Hant.strings"; sourceTree = "<group>"; };
+		DAE7D83D151E064100AD5CA0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
+		DAE7D841151E064A00AD5CA0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = Localizable.strings; sourceTree = "<group>"; };
 		DAE7EAF715178FAD00A7E5C7 /* MarryPagingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarryPagingInfo.h; path = Model/MarryPagingInfo.h; sourceTree = "<group>"; };
 		DAE7EAF815178FAD00A7E5C7 /* MarryPagingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarryPagingInfo.m; path = Model/MarryPagingInfo.m; sourceTree = "<group>"; };
 		DAE7EAF915178FAD00A7E5C7 /* MarryPagingSchParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarryPagingSchParams.h; path = Model/MarryPagingSchParams.h; sourceTree = "<group>"; };
@@ -269,8 +277,6 @@
 		DAE7EB08151790FE00A7E5C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		DAE7EB0A151790FE00A7E5C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DAE7EB0C151790FE00A7E5C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		DAE7EB141517912500A7E5C7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
-		DAE7EB171517912500A7E5C7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = Localizable.strings; sourceTree = "<group>"; };
 		DAE8F06814F6926A00CD0A6B /* RequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestHelper.h; path = Util/RequestHelper.h; sourceTree = "<group>"; };
 		DAE8F06914F6926A00CD0A6B /* RequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestHelper.m; path = Util/RequestHelper.m; sourceTree = "<group>"; };
 		DAE8F06C14F69AA500CD0A6B /* RequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestResult.h; path = Util/RequestResult.h; sourceTree = "<group>"; };
@@ -653,11 +659,27 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		DAE7D83B151E064100AD5CA0 /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7D83C151E064100AD5CA0 /* Localizable.strings */,
+			);
+			path = "zh-Hans.lproj";
+			sourceTree = "<group>";
+		};
+		DAE7D83F151E064A00AD5CA0 /* zh-Hant.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7D840151E064A00AD5CA0 /* Localizable.strings */,
+			);
+			path = "zh-Hant.lproj";
+			sourceTree = "<group>";
+		};
 		DAE7EB03151790D300A7E5C7 /* Localize */ = {
 			isa = PBXGroup;
 			children = (
-				DAE7EB121517912500A7E5C7 /* zh-Hans.lproj */,
-				DAE7EB151517912500A7E5C7 /* zh-Hant.lproj */,
+				DAE7D83F151E064A00AD5CA0 /* zh-Hant.lproj */,
+				DAE7D83B151E064100AD5CA0 /* zh-Hans.lproj */,
 				DAE7EB04151790FE00A7E5C7 /* en.lproj */,
 			);
 			name = Localize;
@@ -672,22 +694,6 @@
 				DAE7EB0B151790FE00A7E5C7 /* MainStoryboard_iPhone.storyboard */,
 			);
 			path = en.lproj;
-			sourceTree = "<group>";
-		};
-		DAE7EB121517912500A7E5C7 /* zh-Hans.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DAE7EB131517912500A7E5C7 /* Localizable.strings */,
-			);
-			path = "zh-Hans.lproj";
-			sourceTree = "<group>";
-		};
-		DAE7EB151517912500A7E5C7 /* zh-Hant.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DAE7EB161517912500A7E5C7 /* Localizable.strings */,
-			);
-			path = "zh-Hant.lproj";
 			sourceTree = "<group>";
 		};
 		DAE9726C1514668F00AB8F66 /* EGOTableViewPullRefresh */ = {
@@ -727,6 +733,9 @@
 				DAE972771514668F00AB8F66 /* grayArrow@2x.png */,
 				DAE972781514668F00AB8F66 /* whiteArrow.png */,
 				DAE972791514668F00AB8F66 /* whiteArrow@2x.png */,
+				DAE7D82D151DE02500AD5CA0 /* en.strings */,
+				DAE7D830151DE03200AD5CA0 /* zh-Hans.strings */,
+				DAE7D832151DE04A00AD5CA0 /* zh-Hant.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -844,8 +853,11 @@
 				DAE7EB0E151790FE00A7E5C7 /* Localizable.strings in Resources */,
 				DAE7EB0F151790FE00A7E5C7 /* MainStoryboard_iPad.storyboard in Resources */,
 				DAE7EB10151790FE00A7E5C7 /* MainStoryboard_iPhone.storyboard in Resources */,
-				DAE7EB181517912500A7E5C7 /* Localizable.strings in Resources */,
-				DAE7EB191517912500A7E5C7 /* Localizable.strings in Resources */,
+				DAE7D82E151DE02500AD5CA0 /* en.strings in Resources */,
+				DAE7D831151DE03200AD5CA0 /* zh-Hans.strings in Resources */,
+				DAE7D833151DE04A00AD5CA0 /* zh-Hant.strings in Resources */,
+				DAE7D83E151E064100AD5CA0 /* Localizable.strings in Resources */,
+				DAE7D842151E064A00AD5CA0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,6 +993,22 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		DAE7D83C151E064100AD5CA0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE7D83D151E064100AD5CA0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DAE7D840151E064A00AD5CA0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE7D841151E064A00AD5CA0 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DAE7EB05151790FE00A7E5C7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1011,22 +1039,6 @@
 				DAE7EB0C151790FE00A7E5C7 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		DAE7EB131517912500A7E5C7 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAE7EB141517912500A7E5C7 /* zh-Hans */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		DAE7EB161517912500A7E5C7 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAE7EB171517912500A7E5C7 /* zh-Hant */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
